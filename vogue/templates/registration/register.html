@@ -1,4 +1,3 @@
-<!-- templates/registration/register.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +7,10 @@
     <script>
         let memberCount = 0;
 
-        // Function to add a new member
         function addMember() {
             memberCount++;
             const memberDiv = document.createElement('div');
-            memberDiv.setAttribute('id', `member_${memberCount}`);  // Assign unique id to each member div
+            memberDiv.setAttribute('id', `member_${memberCount}`);
             memberDiv.innerHTML = `
                 <h4>Member ${memberCount}</h4>
                 <input type="text" name="member_name_${memberCount}" placeholder="Member Name">
@@ -22,14 +20,13 @@
             document.getElementById('members').appendChild(memberDiv);
         }
 
-        // Function to remove the last added member
         function removeMember() {
             if (memberCount > 0) {
                 const memberDiv = document.getElementById(`member_${memberCount}`);
-                memberDiv.remove();  // Remove the last added member's div
-                memberCount--;  // Decrement the count
+                memberDiv.remove();
+                memberCount--;
             } else {
-                alert("No members to remove!");  // Display alert if there are no members to remove
+                alert("No members to remove!");
             }
         }
     </script>
@@ -41,7 +38,7 @@
         {{ form.as_p }}
         <div id="members"></div>
         <button type="button" onclick="addMember()">Member+</button>
-        <button type="button" onclick="removeMember()">Member-</button> <!-- Button to remove members -->
+        <button type="button" onclick="removeMember()">Member-</button>
         <br><br>
         <button type="submit">Register Team</button>
     </form>
