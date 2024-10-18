@@ -16,8 +16,11 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+from vogue import views
 
 urlpatterns = [
+    path("",views.landing_page,name='landing_page'),
     path("admin/", admin.site.urls),
+    path('vogue/', include('vogue.urls'))
 ]
