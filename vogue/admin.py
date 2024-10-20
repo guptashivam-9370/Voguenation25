@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Team, TeamMember
 
-# Register your models here.
+class TeamMemberInline(admin.TabularInline):
+    model = TeamMember
+    extra = 1
