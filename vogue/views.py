@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .forms.TeamRegistrationForm import TeamRegistrationForm
 from .models import Team,TeamMember
+from django.conf import settings
+from django.core.mail import EmailMessage,BadHeaderError
+from django.http import HttpResponse
+
 
 def register(request):
     if request.method == 'POST':
@@ -22,6 +26,18 @@ def register(request):
                         member_name=member_name,
                         member_email=member_email
                     )
+            try:
+                email = EmailMessage(
+                    'Team Registration Confirmation',
+                    f'Dear {team.team_leader_name},\n\nYour team "{team.team_name}" has been successfully registered.',
+                    settings.DEFAULT_FROM_EMAIL,
+                    [team.team_leader_email],
+                )
+                email.send(fail_silently=False)
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            except Exception as e:
+                return HttpResponse(f"An error occurred while sending email: {str(e)}")
         return render(request, 'registration/success.html', {'form': form})
     else:
         form = TeamRegistrationForm()
