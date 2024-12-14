@@ -22,14 +22,14 @@ def register(request):
                         member_name=member_name,
                         member_email=member_email
                     )
-        return render(request, 'registration/success.html', {'form': form})
+        return render(request, 'vogue/registration/success.html', {'form': form})
     else:
         form = TeamRegistrationForm()
 
-    return render(request, 'registration/register.html', {'form': form})
+    return render(request, 'vogue/registration/register.html', {'form': form})
 
 def success(request):
-    return render(request,'registration/success.html')
+    return render(request,'vogue/registration/success.html')
 
 def landing_page(request):
-    return render(request,'landing.html')
+    return render(request,'vogue/index.html')

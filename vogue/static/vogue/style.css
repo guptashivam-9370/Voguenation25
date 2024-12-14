@@ -1,0 +1,35 @@
+@font-face {
+    font-family: biliga;
+    src: url(fonts/Bigilla-Bold.otf);
+    font-weight: bold;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.hero-container{
+    overflow: hidden;
+}
+
+.hero{
+    height: calc(100vh + 20px);
+    margin: -10px;
+    background: #040402 url("images/hero-background.png") no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passive{
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+.logo{
+    color: white;
+    font-size: 120px;
+    font-family: biliga;
+}
