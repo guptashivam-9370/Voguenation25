@@ -8,26 +8,76 @@
     <link rel="stylesheet" href="{% static 'vogue/style.css' %}">
 </head>
 <body>
-    <header>
-        <nav></nav>
-        <div class="hero-container">
-            <div class="hero">
-                <div class="logo">VOGUE NATION</div>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="navcontent">
+                    <div class="navleft">
+                        <div class="navAlcher">ALCHERINGA '25</div>
+                        <ul class="navlist">
+                            <li><a href="#home-start">HOME</a></li>
+                            <li><a href="#home-end">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                    <div class="navright">
+                        <div class="navbtn">
+                            <button>REGISTER
+                                <a href=""></a>
+                            </button>
+                        </div>
+                        <div class="navmenu">
+                            <div class="navmenubar" id="navmenubar-1">|</div>
+                            <div class="navmenubar" id="navmenubar-2">|</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navlogo">
+                    <div class="navlogotext invisible">VOGUE NATION</div>
+                    <div class="navlogoimage"></div>
+                </div>
+            </nav>
+            <div class="sidebar">
+                <ul class="sidebarlist">
+                    <li>HOME</li>
+                    <li>GLAMOUR NOVA</li>
+                    <li>STATE OF DRESS</li>
+                    <li>HAUTE COUTURE</li>
+                    <li>GALLERY</li>
+                    <li>CONTACT US</li>
+                </ul>
             </div>
-        </div>
-    </header>
-    <main></main>
-    <footer></footer>
-
+        </header>
+        <main>
+            <div class="hero">
+                <div class="hero-background"></div>
+                <div class="logo">VOGUE NATION</div>
+                <div class="logo-fixed">VOGUE NATION</div>
+                <p class="para">Vogue Nation, the fashion designing module, newly conceived by the team of Alcheringa 2020 is an attempt to begin the search for the all round champion of the Fashion Designing arena. This will be the race of the elite of the elite. This is where you begin your trek to the top. Three best of the best events especially tailored for the ones destined for greatness. Etch your name into the GOLDEN history of Alcheringa as the ultimate champion of the Fashion Module.</p>
+            </div>
+            <div class="competitions-wrapper" id="home-start">
+                <div class="competitions">
+                    <div class="shape-container">
+                        <div class="shape" id="section-1"></div>
+                        <div class="shape" id="section-2"></div>
+                        <div class="shape" id="section-3"></div>
+                        <div class="shape" id="section-4"></div>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <div class="comp-title">GLAMOUR NOVA</div>
+                    <div class="comp-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu eget felis <br> luctus vehicula.</div>
+                    <div class="comp-rulebook"><a class="comp-rulebook-link" href="https://www.google.co.in/">RULEBOOK</a></div>
+                </div>
+            </div>
+            <div class="extra-space" id="#home-end"></div>
+        </main>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/e8ab452149.js" crossorigin="anonymous"></script>
     <script src="{% static 'vogue/vogue.js' %}"></script>
 </body>
 </html>
-
-
-
-
 
 
 <!-- templates/landing.html -->
