@@ -1,315 +1,100 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vogue Nation</title>
-    <link rel="stylesheet" href="{% static 'core/vog_home.css' %}" /> <link rel="stylesheet" href="{% static 'core/vog_home_img.css' %}" />
-    <link rel="icon" type="image/x-icon" href="{% static 'core/Group 19.png' %}" />
-  </head>
-
-  <body>
-    <div class="frst">
-      <div class="box-1">
-        <div class="equal">
-          <img class="logo" id="item-1" src="{% static 'core/Group 19.png' %}" />
-        </div>
-        <p class="head" id="item-2">VOGUE NATION</p>
-        <button class="register" id="item-3">Register</button>
-      </div>
-    </div>
-    <div class="gap"></div>
-    <div class="nav_container">
-      <div class="box-2">
-        <navbar class="nav">
-          <ul>
-            <li>
-              <a href="">HOME</a>
-            </li>
-            <li>
-              <a id="menu" href="#">COMPETITIONS</a>
-            </li>
-            <li>
-              <a href="#gal">GALLERY</a>
-            </li>
-            <li>
-              <a href="#coll">CONTACT US</a>
-            </li>
-          </ul>
-        </navbar>
-        <div id="hamburger">
-          <a href="#Glamour_Nova">Glamour Nova</a>
-          <div class="line"></div>
-          <a href="#States_of _Dress">States of Dresses</a>
-          <div class="line"></div>
-          <a href="#Haute_Coture">Haute Couture</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="gap-2"></div>
-    <div class="blog-1">
-      <div class="box-3">
-        <div class="img-bg-1">
-          <div class="bg-box" id="shift-1"></div>
-        </div>
-        <div class="text-1">
-          <h2>VOGUE NATION</h2>
-          <h3 id="h3-1">PEOPLE WILL STARE.</h3>
-          <h3 id="h3-2">MAKE IT WORTH</h3>
-          <h3 id="h3-2">THEIR WHILE.</h3>
-          <p>Vogue Nation, the fashion designing module, newly concieved by the team of Alcheringa 2020 is an attempt to begin the search for the all round champion of the Fashion Designing arena. This will be the race of the elite of the elite. This is where you begin your trek to the top. Three best of the best events especially tailored for the ones destined for greatness. Etch your name into the GOLDEN history of Alcheringa as the ultimate champion of the Fashion Module.</p>
-        </div>
-        <div class="img-bg-2 seperate top-border">
-          <div class="bg-box" id="shift-2"></div>
-        </div>
-        <img class="image_1" src="{% static 'core/cover_1-min.jpg' %}" /> <img class="image_2" src="{% static 'core/COVER-min.jpg' %}" />
-      </div>
-    </div>
-    <div class="gap-3"></div>
-    <div class="logo-gap">
-      <img class="triangle" src="{% static 'core/Group 149.png' %}" />
-    </div>
-    <div class="gap-4" id="Haute_Coture"></div>
-    <div class="section-1">
-      <div class="box-4">
-        <div class="spacing-adjust">
-          <h2 class="glamour-nova">HAUTE COUTURE</h2>
-        </div>
-        <div class="grid-box">
-          <div class="container">
-            <img class="image_3" src="{% static 'core/Haute Couture_1.jpg' %}" />
-          </div>
-          <div class="container" id="no-border">Haute Couture, where the most glamorous people show off their skills as they walk the ramp and evoking all those creative people out there to put on their thinking caps and come out with the most innovative theme based fashion show.</div>
-          <div class="container">
-            <img class="image_4" src="{% static 'core/IMG_4319-min.jpg' %}" />
-          </div>
-        </div>
-        <div class="venue-container">
-          <div class="venue-box">
-            <h2>TIME</h2>
-            <p>The Pre-finals have a 30-minute time limit with a specific theme, while the finals, lasting 45 minutes, are theme-less.</p>
-          </div>
-          <div class="venue-box">
-            <h2>VENUE</h2>
-            <p>The Haute Couture competition will be hosted at the IIT Guwahati Auditorium, radiating elegance.</p>
-          </div>
-          <div class="venue-box">
-            <h2>TEAM COMPOSITION</h2>
-            <p>Every Team has to have minimum 5 models, utmost 4 designers, 1 choreographer and 1 make-up artist. The minimum age limit for models is 17 years.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="rulebook-container">
-      <a href="https://drive.google.com/file/d/1YApMxtAWnon-vxFg6mxNAb7vn2g43s6j/view?usp=sharing" target="_blank">
-        <div class="rulebook">
-          <p>RULE BOOK</p>
-        </div>
-      </a>
-    </div>
-    <div class="logo-gap">
-      <img class="triangle" src="{% static 'core/Group 149.png' %}" />
-    </div>
-    <div class="gap-5" id="States_of _Dress"></div>
-    <div class="section-1">
-      <div class="box-5">
-        <div class="spacing-adjust">
-          <h2 class="glamour-nova small-width">STATES OF DRESS</h2>
-        </div>
-        <div class="grid-box-1">
-          <div class="container">
-            <img class="image_3" src="{% static 'core/IMG_5418-min.jpg' %}" />
-          </div>
-          <div class="container" id="no-border">States of Dress, where you let your creativity run wild as you design the best outfit for your friend using only paper. Put your origami and fashion skills to use and come up with the perfect dress.</div>
-          <div class="container">
-            <img class="image_4" src="{% static 'core/IMG_5438-min.jpg' %}" />
-          </div>
-        </div>
-        <div class="venue-container adjust-width">
-          <div class="venue-box adjust-width-1">
-            <h2>TIME</h2>
-            <p>The time limit for the event is set at 3 hours, and the theme will be revealed on the spot.</p>
-          </div>
-          <div class="venue-box adjust-width-1">
-            <h2>VENUE</h2>
-            <p>The States of Dress competition is scheduled to take place on the IIT Guwahati campus, with the precise venue details to be communicated shortly.</p>
-          </div>
-          <div class="venue-box adjust-width-1">
-            <h2>TEAM COMPOSITION</h2>
-            <p>Each team will have 3 members, one person, for whom the outfit will be designed and the others designer for the outfit</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="rulebook-container">
-      <a href="https://drive.google.com/file/d/1Zw9QhxmH1UTe4Zcww2nuQi1_Jw1aCFJ4/view?usp=sharing" target="_blank">
-        <div class="rulebook">
-          <p>RULE BOOK</p>
-        </div>
-      </a>
-    </div>
-    <div class="logo-gap">
-      <img class="triangle" src="{% static 'core/Group 149.png' %}" />
-    </div>
-    <div class="gap-5" id="Glamour_Nova"></div>
-    <div class="section-1">
-      <div class="box-5">
-        <div class="spacing-adjust">
-          <h2 class="glamour-nova small-width">GLAMOUR NOVA</h2>
-        </div>
-        <div class="grid-box-1">
-          <div class="container">
-            <img class="image_3" src="{% static 'core/Glamour Nova_1.jpg' %}" />
-          </div>
-          <div class="container" id="no-border">Glamour Nova is the stage where the most glamorous individuals showcase their skills through elegant photoshoots, set against exotic locations of their choosing.</div>
-          <div class="container">
-            <img class="image_4" src="{% static 'core/Glamour Nova_2.jpg' %}" />
-          </div>
-        </div>
-        <div class="venue-container adjust-width">
-          <div class="venue-box adjust-width-1">
-            <h2>TIME</h2>
-            <p>This is an online competition so the submission of photos must be done well before 1st March</p>
-          </div>
-          <div class="venue-box adjust-width-1">
-            <h2>VENUE</h2>
-            <p>As an online competition, participants are required to conduct their photoshoots at five distinct locations, featuring a new outfit each time. Submissions can be made at vogue.alcheringa.in.</p>
-          </div>
-          <div class="venue-box adjust-width-1">
-            <h2>TEAM COMPOSITION</h2>
-            <p>Every Team has to have 2 models (1 male and 1 female), utmost 2 designers and 1 photographer. Minimum age limits for models is 17 years.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="rulebook-container">
-      <a href="https://drive.google.com/file/d/1TUkJS48E9IIwBgMnHRxpTuFvF4zstnNA/view?usp=sharing" target="_blank">
-        <div class="rulebook">
-          <p>RULE BOOK</p>
-        </div>
-      </a>
-    </div>
-    <div class="logo-gap">
-      <img class="triangle" src="{% static 'core/Group 149.png' %}" />
-    </div>
-    <div class="gap-5"></div>
-    <div class="main_" id="gal">
-      <div class="container_">
-        <div class="subcontainer_">
-          <div id="heading_">
-            <div id="heading1_">GALLERY</div>
-          </div>
-          <div id="box1_" class="box_">
-            <img src="{% static 'core/IMG_4356-min.jpg' %}" alt="" class="imtop" />
-          </div>
-          <div id="box2_" class="box_">
-            <img src="{% static 'core/IMG_4403-min.jpg' %}" alt="" class="imtop" />
-          </div>
-        </div>
-        <div class="subcontainer_">
-          <div id="box3_" class="box_">
-            <img src="{% static 'core/DSC_0049-min.jpg' %}" alt="" class="imtop" />
-          </div>
-          <div id="box4_" class="box_">
-            <img src="{% static 'core/IMG_5418-1-min.jpg' %}" alt="" class="imtop" />
-          </div>
-          <div id="box5_" class="box_">
-            <img src="{% static 'core/IMG_5458-1-min.jpg' %}" alt="" class="imtop" />
-          </div>
-        </div>
-      </div>
-      <div class="triangles_">
-        <img class="triangle_" src="{% static 'core/Group 149.png' %}" /> <img class="triangle_" src="{% static 'core/Group 149.png' %}" /> <img class="triangle_" src="{% static 'core/Group 149.png' %}" />
-      </div>
-      <div class="container_2">
-        <div class="footer_1">
-          <div class="left">
-            <div class="con">Contact us</div>
-            <div class="face">
-              <img src="{% static 'core/head.jpg' %}" class="face_con" />
-            </div>
-            <div id="name_" class="dis">Harsh vardhan chitti</div>
-            <div id="email_" class="dis">vogue@alcheringa.in</div>
-            <div id="number_" class="dis">+91 7386847545</div>
-          </div>
-          <div class="mid">
-            <div id="logo_">
-              <img src="{% static 'core/Group 217.svg' %}" alt="" id="alc" />
-            </div>
-            <div id="coll">IIT GUWAHATI’S</div>
-            <div id="title">ALCHERINGA</div>
-            <div id="copy">COPYRIGHT © 2025 ALCHERINGA. ALL RIGHTS RESERVED</div>
-            <div class="credit">Designed by Team Creatives. Developed by Team WebOps.</div>
-          </div>
-          <div class="right">
-            <div class="follow">
-              <div class="flw">Follow us</div>
-              <div class="sign">
-                <a href="https://twitter.com/alcheringaiitg" target="_blank"><img src="{% static 'core/Group 218.svg' %}" alt="" class="sym" /></a>
-              </div>
-              <div class="sign">
-                <a href="https://www.facebook.com/voguenation.alcheringa/" target="_blank"><img src="{% static 'core/Group 220.svg' %}" alt="" class="sym" /></a>
-              </div>
-              <div class="sign">
-                <a href="https://www.threads.net/@alcheringaiitg" target="_blank"><img src="{% static 'core/Group 221.svg' %}" alt="" class="sym" /></a>
-              </div>
-              <div class="sign">
-                <a href="https://www.instagram.com/voguenation_alcheriitg/" target="_blank"><img src="{% static 'core/Group 222.svg' %}" alt="" class="sym" /></a>
-              </div>
-              <div class="sign">
-                <a href="https://www.youtube.com/channel/UCQfsLKaY4a1Mx75hnaZDoxw" target="_blank"><img src="{% static 'core/Group 223.svg' %}" alt="" class="sym" /></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% if messages %}
-      <div class="black">
-        <div class="popup">
-          <div class="atn">Attention</div>
-          <div class="dis1">
-            {% for message in messages %}
-              <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-            {% endfor %}
-          </div>
-          <button id="cls">CLOSE</button>
-        </div>
-      </div>
-    {% endif %}
-    <script>
-      if (document.querySelectorAll('.black')) {
-        const popup = document.querySelectorAll('.black')[0]
-        popup.addEventListener('click', function () {
-          popup.style.display = 'none'
-        })
-      }
-      
-      let menu = document.querySelector('#hamburger')
-      var dis = 1
-      
-      function toggleShow() {
-        console.log('runed')
-        if (dis == 1) {
-          menu.style.display = 'flex'
-          dis = 0
-        } else {
-          menu.style.display = 'none'
-          dis = 1
-        }
-      }
-      
-      document.getElementById('menu').addEventListener('click', toggleShow)
-    </script>
-    <script>
-      document.getElementById('item-3').addEventListener('click', function () {
-        window.location.href = '/register/Haute_Couture'
-      })
-    </script>
-  </body>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vogue Nation</title>
+		<link rel="stylesheet" href="{% static 'core/style.css' %}" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav class="navbar">
+					<div class="navcontent">
+						<div class="navleft">
+							<div class="navAlcher">ALCHERINGA '25</div>
+							<ul class="navlist">
+								<li><a href="#home-start">HOME</a></li>
+								<li><a href="#home-end">CONTACT US</a></li>
+							</ul>
+						</div>
+						<div class="navright">
+							<div class="navbtn">
+								<button>
+									REGISTER
+									<a href=""></a>
+								</button>
+							</div>
+							<div class="navmenu">
+								<div class="navmenubar" id="navmenubar-1">|</div>
+								<div class="navmenubar" id="navmenubar-2">|</div>
+							</div>
+						</div>
+					</div>
+					<div class="navlogo">
+						<div class="navlogotext invisible">VOGUE NATION</div>
+						<div class="navlogoimage"></div>
+					</div>
+				</nav>
+				<div class="sidebar">
+					<ul class="sidebarlist">
+						<li>HOME</li>
+						<li>GLAMOUR NOVA</li>
+						<li>STATE OF DRESS</li>
+						<li>HAUTE COUTURE</li>
+						<li>GALLERY</li>
+						<li>CONTACT US</li>
+					</ul>
+				</div>
+			</header>
+			<main>
+				<div class="hero">
+					<div class="hero-background"></div>
+					<div class="logo">VOGUE NATION</div>
+					<div class="logo-fixed">VOGUE NATION</div>
+					<p class="para">
+						Vogue Nation, the fashion designing module, newly conceived by the
+						team of Alcheringa 2020 is an attempt to begin the search for the
+						all round champion of the Fashion Designing arena. This will be the
+						race of the elite of the elite. This is where you begin your trek to
+						the top. Three best of the best events especially tailored for the
+						ones destined for greatness. Etch your name into the GOLDEN history
+						of Alcheringa as the ultimate champion of the Fashion Module.
+					</p>
+				</div>
+				<div class="competitions-wrapper" id="home-start">
+					<div class="competitions">
+						<div class="shape-container">
+							<div class="shape" id="section-1"></div>
+							<div class="shape" id="section-2"></div>
+							<div class="shape" id="section-3"></div>
+							<div class="shape" id="section-4"></div>
+						</div>
+					</div>
+					<div class="text-container">
+						<div class="comp-title">GLAMOUR NOVA</div>
+						<div class="comp-text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+							arcu eget felis <br />
+							luctus vehicula.
+						</div>
+						<div class="comp-rulebook">
+							<a class="comp-rulebook-link" href="https://www.google.co.in/"
+								>RULEBOOK</a
+							>
+						</div>
+					</div>
+				</div>
+				<div class="extra-space" id="#home-end"></div>
+			</main>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/e8ab452149.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="{% static 'core/vogue.js' %}"></script>
+	</body>
 </html>
