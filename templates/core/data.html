@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Team Name</th>
+          <th>Performance</th>
+          <th>Leader Name</th>
+          <th>Leader email</th>
+          <th>Leader Phone</th>
+          <th>Leader City</th>
+          <th>Leader Role</th>
+          <th>Members</th>
+        </tr>
+      </thead>
+      <tbody>
+        <style>
+          table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+          th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+          }
+          tr:hover {
+            background-color: #f5f5f5;
+          }
+        </style>
+        {% for team in teams %}
+          <tr>
+            <td>{{ team.team_name }}</td>
+            <td>{{ team.prev_performance }}</td>
+            <td>{{ team.member_detail_set.all.0.name }}</td>
+            <td>{{ team.member_detail_set.all.0.email }}</td>
+            <td>{{ team.member_detail_set.all.0.phone_number }}</td>
+            <td>{{ team.member_detail_set.all.0.your_city }}</td>
+            <td>{{ team.member_detail_set.all.0.role }}</td>
+            <td>
+              {% for mem in team.member_detail_set.all %}
+                {{ mem.name }},
+                {{ mem.email }},
+                {{ mem.phone_number }},
+                {{ mem.your_city }},
+                {{ mem.role }}<br>
+              {% endfor %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

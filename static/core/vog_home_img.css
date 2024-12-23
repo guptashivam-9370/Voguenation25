@@ -1,0 +1,40 @@
+.bg-box{
+    position: relative;
+    height: 27.30vw;
+    width: 24.51vw;
+    z-index: 24;
+    background: #FFFBEF;
+}
+
+#shift-1{
+    position: relative;
+    z-index: 24888;
+}
+
+.image_1{
+    position: absolute;
+    height: 31.11vw;
+    width: 24.51vw;
+    z-index: 25;
+    left: 13.7vw;
+    top: 26.6vw;
+}
+.image_2{
+    position: absolute;
+    height: 31.11vw;
+    width: 22.08vw;
+    z-index: 55;
+    left: 30.85vw;
+    top: 39.3vw;
+}
+.image_3{
+    height: 45.83vw;
+    width: 39.375vw;
+    object-fit: cover;
+}
+.image_4{
+    height: 30.625vw;
+    width: 25.83vw;
+    object-fit: cover;
+
+}
