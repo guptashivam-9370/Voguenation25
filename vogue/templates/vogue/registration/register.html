@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Registration</title>
+    <script>
+        let memberCount = 0;
+
+        function addMember() {
+            memberCount++;
+            const memberDiv = document.createElement('div');
+            memberDiv.setAttribute('id', `member_${memberCount}`);
+            memberDiv.innerHTML = `
+                <h4>Member ${memberCount}</h4>
+                <input type="text" name="member_name_${memberCount}" placeholder="Member Name">
+                <input type="email" name="member_email_${memberCount}" placeholder="Member Email">
+                <br>
+            `;
+            document.getElementById('members').appendChild(memberDiv);
+        }
+
+        function removeMember() {
+            if (memberCount > 0) {
+                const memberDiv = document.getElementById(`member_${memberCount}`);
+                memberDiv.remove();
+                memberCount--;
+            } else {
+                alert("No members to remove!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Register Your Team</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div id="members"></div>
+        <button type="button" onclick="addMember()">Member+</button>
+        <button type="button" onclick="removeMember()">Member-</button>
+        <br><br>
+        <button type="submit">Register Team</button>
+    </form>
+</body>
+</html>
