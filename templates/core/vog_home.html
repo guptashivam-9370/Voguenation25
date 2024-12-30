@@ -1,99 +1,260 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vogue Nation</title>
-		<link rel="stylesheet" href="{% static 'core/style.css' %}" />
-	</head>
-	<body>
-		<div class="wrapper">
-			<header>
-				<nav class="navbar">
-					<div class="navcontent">
-						<div class="navleft">
-							<div class="navAlcher">ALCHERINGA '25</div>
-							<ul class="navlist">
-								<li><a href="#home-start">HOME</a></li>
-								<li><a href="#home-end">CONTACT US</a></li>
-							</ul>
-						</div>
-						<div class="navright">
-							<div class="navbtn">
-								<button id="navbtn1">
-									REGISTER
-								</button>
-							</div>
-							<div class="navmenu">
-								<div class="navmenubar" id="navmenubar-1">|</div>
-								<div class="navmenubar" id="navmenubar-2">|</div>
-							</div>
-						</div>
-					</div>
-					<div class="navlogo">
-						<div class="navlogotext invisible">VOGUE NATION</div>
-						<div class="navlogoimage"></div>
-					</div>
-				</nav>
-				<div class="sidebar">
-					<ul class="sidebarlist">
-						<li>HOME</li>
-						<li>GLAMOUR NOVA</li>
-						<li>STATE OF DRESS</li>
-						<li>HAUTE COUTURE</li>
-						<li>GALLERY</li>
-						<li>CONTACT US</li>
-					</ul>
-				</div>
-			</header>
-			<main>
-				<div class="hero">
-					<div class="hero-background"></div>
-					<div class="logo">VOGUE NATION</div>
-					<div class="logo-fixed">VOGUE NATION</div>
-					<p class="para">
-						Vogue Nation, the fashion designing module, newly conceived by the
-						team of Alcheringa 2020 is an attempt to begin the search for the
-						all round champion of the Fashion Designing arena. This will be the
-						race of the elite of the elite. This is where you begin your trek to
-						the top. Three best of the best events especially tailored for the
-						ones destined for greatness. Etch your name into the GOLDEN history
-						of Alcheringa as the ultimate champion of the Fashion Module.
-					</p>
-				</div>
-				<div class="competitions-wrapper" id="home-start">
-					<div class="competitions">
-						<div class="shape-container">
-							<div class="shape" id="section-1"></div>
-							<div class="shape" id="section-2"></div>
-							<div class="shape" id="section-3"></div>
-							<div class="shape" id="section-4"></div>
-						</div>
-					</div>
-					<div class="text-container">
-						<div class="comp-title">GLAMOUR NOVA</div>
-						<div class="comp-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
-							arcu eget felis <br />
-							luctus vehicula.
-						</div>
-						<div class="comp-rulebook">
-							<a class="comp-rulebook-link" href="https://www.google.co.in/"
-								>RULEBOOK</a
-							>
-						</div>
-					</div>
-				</div>
-				<div class="extra-space" id="#home-end"></div>
-			</main>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-		<script
-			src="https://kit.fontawesome.com/e8ab452149.js"
-			crossorigin="anonymous"
-		></script>
-		<script src="{% static 'core/vogue.js' %}"></script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vogue Nation</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="navcontent">
+                    <div class="navleft">
+                        <div class="navAlcher">ALCHERINGA '25</div>
+                        <ul class="navlist">
+                            <li><a href="#home-start">HOME</a></li>
+                            <li><a href="#home-end">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                    <div class="navright">
+                        <div class="navbtn" id="navbtn1">
+                            <button>REGISTER
+                            </button>
+                        </div>
+                        <div class="navmenu">
+                            <div class="navmenubar" id="navmenubar-1">|</div>
+                            <div class="navmenubar" id="navmenubar-2">|</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navlogo">
+                    <div class="navlogotext">VOGUE NATION</div>
+                    <div class="navlogoimage"></div>
+                </div>
+            </nav>
+            <div class="sidebar">
+                <ul class="sidebarlist">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">GLAMOUR NOVA</a></li>
+                    <li><a href="">STATE OF DRESS</a></li>
+                    <li><a href="">HAUTE COUTURE</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="hero-wrapper">
+                <div class="hero-background"></div>
+                <div class="hero">
+                    <div class="logo">VOGUE NATION</div>
+                    <div class="logo-fixed invisible">VOGUE NATION</div>
+                    <p class="para">Vogue Nation, the fashion designing module, newly conceived by the team of Alcheringa 2020 is an attempt to begin the search for the all round champion of the Fashion Designing arena. This will be the race of the elite of the elite. This is where you begin your trek to the top. Three best of the best events especially tailored for the ones destined for greatness. Etch your name into the GOLDEN history of Alcheringa as the ultimate champion of the Fashion Module.</p>
+                </div>
+            </div>
+            <div class="competitions-wrapper" id="home-start">
+                <div class="competitions">
+                    <div class="shape-container">
+                        <div class="shape" id="section-1"></div>
+                        <div class="shape" id="section-2"></div>
+                        <div class="shape" id="section-3"></div>
+                        <div class="shape" id="section-4"></div>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <div class="comp-title">GLAMOUR NOVA</div>
+                    <div class="comp-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae arcu eget felis <br> luctus vehicula.</div>
+                    <div class="comp-rulebook"><a class="comp-rulebook-link" href="https://www.google.co.in/">RULEBOOK</a></div>
+                </div>
+            </div>
+            <div class="extra-space" id="#home-end"></div>
+        </main>
+        <!-- ARSHAD'S PORTION -->
+        <div class="for-bg-black">
+            <div class="vo-gallary">
+                <div class="gallary-head">
+                    GALLERY
+                </div>
+                <div class="prev"></div>
+                <div class="slider">
+                    <img src="{% static 'vogue/images/image1.png' %}" alt="Image 1">
+                    <img src="{% static 'vogue/images/image2.png' %}" alt="Image 2">
+                    <img src="{% static 'vogue/images/image3.png' %}" alt="Image 3">
+                    <img src="{% static 'vogue/images/image4.png' %}" alt="Image 4">
+                    <img src="{% static 'vogue/images/image1.png' %}" alt="Image 1">
+                    <img src="{% static 'vogue/images/image2.png' %}" alt="Image 2">
+                    <img src="{% static 'vogue/images/image3.png' %}" alt="Image 3">
+                    <img src="{% static 'vogue/images/image4.png' %}" alt="Image 4">
+                </div>
+                <div class="next" ></div>
+            </div>
+            <footer class="fu">
+                <div class="fu-link-and-logo">
+                    <div class="fu-link">
+                        <div class="follow-us">Follow us</div>
+                        <div class="links">
+                            <svg  viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1905 4.01267L20.4143 4.15812L19.8642 5.28004C19.5959 5.82716 19.3274 6.37428 19.0586 6.92139C19.0267 7.03727 18.9707 7.13886 18.8879 7.27113C18.8532 7.32639 18.735 7.50218 18.7294 7.51062C18.6982 7.55828 18.6751 7.59586 18.6585 7.62598V9.72856C18.6585 15.1088 13.5417 18.5278 8.70955 18.5278C7.72077 18.5278 6.96952 18.4796 6.10929 18.2885C4.69364 17.9742 3.64011 17.3493 3.15802 16.2571L2.66169 15.1327L3.8679 15.0199C4.95909 14.9177 5.90518 14.7062 6.63173 14.4229C4.63708 14.0965 3.51929 13.205 3.51929 11.5308V10.6505H4.38434C4.5744 10.6505 4.74578 10.6348 4.899 10.606C3.40199 9.69522 2.65218 8.23408 2.65218 6.20744C2.65202 6.12106 2.65202 6.12106 2.65151 6.0287C2.64588 5.00717 2.6998 4.46135 2.97461 3.76472C3.15073 3.31825 3.4053 2.90494 3.74792 2.52623L4.4007 1.80469L5.03536 2.54278C7.12685 4.97512 9.19433 6.45077 11.3053 6.62927C11.3143 4.38483 12.9812 2.68631 15.1981 2.68631C16.2316 2.68631 17.1691 3.08551 17.9059 3.80533C18.3091 3.88964 18.7373 3.95882 19.1905 4.01267ZM17.278 5.46881L17.0128 5.40771L16.8297 5.2032C16.3869 4.70872 15.831 4.44725 15.1982 4.44725C13.9326 4.44725 13.0354 5.36484 13.0354 6.64796C13.0354 6.85765 13.03 6.98941 13.0044 7.16259C12.9019 7.85363 12.521 8.40852 11.7378 8.40852C9.1443 8.40852 6.80458 6.9947 4.52304 4.57996C4.40542 4.94381 4.37776 5.31781 4.38162 6.01921C4.38214 6.11302 4.38214 6.11302 4.38232 6.20782C4.38232 8.01064 5.10006 8.99677 6.79949 9.54643L7.4025 9.74147V10.3854C7.4025 11.1662 6.67557 11.9011 5.61196 12.2304C6.09953 12.6068 7.09666 12.8099 8.70989 12.8099H9.57494V13.6902C9.57494 14.9514 8.15083 15.9389 5.99956 16.4546C6.70114 16.6733 7.63529 16.7676 8.70959 16.7676C12.7013 16.7676 16.9284 13.9431 16.9284 9.72894V7.52824C16.9284 7.26963 17.0021 7.04515 17.1245 6.81175C17.1723 6.72049 17.225 6.6335 17.29 6.53427C17.3023 6.51559 17.3477 6.4479 17.3837 6.39379L17.4523 6.25426C17.5634 6.02817 17.6745 5.80208 17.7855 5.57599C17.6129 5.54274 17.4438 5.50701 17.278 5.46881Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="links">
+                            <svg  viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.63306 0.804688H16.4739C17.4294 0.804688 18.204 1.59292 18.204 2.56525V16.6498C18.204 17.6221 17.4294 18.4103 16.4739 18.4103H2.63306C1.67755 18.4103 0.902954 17.6221 0.902954 16.6498V2.56525C0.902954 1.59292 1.67755 0.804688 2.63306 0.804688ZM2.633 2.56525V16.6498H16.4738V2.56525H2.633ZM10.4186 6.96586C9.97069 6.96586 9.4975 7.10517 9.07959 7.36388L8.68846 6.96586H7.82341V13.1278H9.55351V9.60671C9.55351 9.09989 10.0673 8.72643 10.4186 8.72643H11.2836C11.6349 8.72643 12.1487 9.09989 12.1487 9.60671V13.1278H13.8788V9.60671C13.8788 7.9757 12.4895 6.96586 11.2836 6.96586H10.4186ZM6.09328 6.08558C6.57104 6.08558 6.95834 5.69146 6.95834 5.2053C6.95834 4.71913 6.57104 4.32502 6.09328 4.32502C5.61553 4.32502 5.22823 4.71913 5.22823 5.2053C5.22823 5.69146 5.61553 6.08558 6.09328 6.08558ZM5.22823 6.96586V13.1278H6.95834V6.96586H5.22823Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="links">
+                            <svg  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.88696 0.804688H15.7278C16.6833 0.804688 17.4579 1.59292 17.4579 2.56525V16.6498C17.4579 17.6221 16.6833 18.4103 15.7278 18.4103H1.88696C0.931454 18.4103 0.15686 17.6221 0.15686 16.6498V2.56525C0.15686 1.59292 0.931454 0.804688 1.88696 0.804688ZM1.88691 2.56525V16.6498H15.7277V2.56525H1.88691ZM8.05753 9.61058H9.67253V14.8884H11.4026V9.61058H13.1175V7.85001H11.4026V6.96586C11.4026 6.4797 11.7899 6.08558 12.2677 6.08558H13.1327V4.32502H12.2677C10.8344 4.32502 9.67253 5.50736 9.67253 6.96586V7.85001H8.05753V9.61058Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="links">
+                            <svg  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6541 5.2061H13.3842V9.60751C13.3842 11.7826 13.5481 12.2484 14.2493 12.2484C15.3776 12.2484 15.9794 11.7054 15.9794 9.60751C15.9794 4.95139 13.6844 2.56525 9.05905 2.56525C6.06248 2.56563 3.40657 4.52851 2.47923 7.42815C1.55189 10.3278 2.5638 13.5054 4.98619 15.3004C7.40858 17.0954 10.691 17.0999 13.1183 15.3117L14.1328 16.7378C11.0988 18.9731 6.99574 18.9673 3.96776 16.7236C0.939773 14.4798 -0.325124 10.5079 0.834057 6.88331C1.99324 3.25876 5.31311 0.805167 9.05894 0.804688C14.6484 0.804688 17.7095 3.98743 17.7095 9.60751C17.7095 12.728 16.2898 14.0089 14.2493 14.0089C13.0867 14.0089 12.4214 13.6275 12.0562 12.7807C11.2788 13.5413 10.2225 14.0089 9.05887 14.0089C6.67009 14.0089 4.73361 12.0383 4.73361 9.60751C4.73361 7.17667 6.67009 5.2061 9.05887 5.2061C10.0326 5.2061 10.9312 5.53354 11.6541 6.08611V5.2061ZM11.6541 9.60671C11.6541 11.0652 10.4922 12.2476 9.05896 12.2476C7.62569 12.2476 6.4638 11.0652 6.4638 9.60671C6.4638 8.14821 7.62569 6.96586 9.05896 6.96586C10.4922 6.96586 11.6541 8.14821 11.6541 9.60671Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="links">
+                            <svg  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7714 0.806641H5.85096C2.98443 0.806641 0.660645 3.17133 0.660645 6.08833V13.1306C0.660645 16.0476 2.98443 18.4123 5.85096 18.4123H12.7714C15.6379 18.4123 17.9617 16.0476 17.9617 13.1306V6.08833C17.9617 3.17133 15.6379 0.806641 12.7714 0.806641ZM2.39069 6.08833C2.39069 4.14367 3.93988 2.5672 5.8509 2.5672H12.7713C14.6823 2.5672 16.2315 4.14367 16.2315 6.08833V13.1306C16.2315 15.0753 14.6823 16.6517 12.7713 16.6517H5.8509C3.93988 16.6517 2.39069 15.0753 2.39069 13.1306V6.08833ZM9.31118 14.0101C6.92241 14.0101 4.98592 12.0395 4.98592 9.60866C4.98592 7.17783 6.92241 5.20725 9.31118 5.20725C11.7 5.20725 13.6364 7.17783 13.6364 9.60866C13.6364 12.0395 11.7 14.0101 9.31118 14.0101ZM9.31118 12.2487C10.7444 12.2487 11.9063 11.0664 11.9063 9.60786C11.9063 8.14936 10.7444 6.96702 9.31118 6.96702C7.87792 6.96702 6.71603 8.14936 6.71603 9.60786C6.71603 11.0664 7.87792 12.2487 9.31118 12.2487ZM14.5017 5.20566C14.5017 5.69182 14.1144 6.08594 13.6366 6.08594C13.1589 6.08594 12.7716 5.69182 12.7716 5.20566C12.7716 4.71949 13.1589 4.32537 13.6366 4.32537C14.1144 4.32537 14.5017 4.71949 14.5017 5.20566Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="links">
+                            <svg  viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2362 12.9993C18.8273 11.9684 19.0799 10.3062 19.0799 7.60229C19.0799 4.90914 18.8297 3.25659 18.2323 2.19809C17.6336 1.09891 16.9235 0.750028 15.5144 0.666286C14.5523 0.599932 12.1614 0.5625 9.56659 0.5625C6.96619 0.5625 4.57418 0.599918 3.60494 0.666806C2.20365 0.750227 1.49344 1.09988 0.889477 2.20211C0.300768 3.25696 0.0487061 4.91758 0.0487061 7.61215C0.0487061 10.2914 0.301989 11.9604 0.894651 13.0118C1.49076 14.0998 2.18965 14.4453 3.60286 14.5463C4.61857 14.6067 7.14595 14.647 9.56659 14.647C11.9818 14.647 14.5079 14.6067 15.5144 14.5469C16.9406 14.4453 17.6393 14.0993 18.2362 12.9993ZM15.4055 2.42334C16.287 2.47576 16.4504 2.55638 16.7298 3.07098C17.1366 3.78785 17.3498 5.19077 17.3498 7.61215C17.3498 10.0152 17.1355 11.4258 16.7317 12.1303C16.4514 12.6465 16.289 12.7269 15.4035 12.79C14.4509 12.8466 11.9493 12.8864 9.56663 12.8864C7.17862 12.8864 4.6757 12.8466 3.71401 12.7894C2.83942 12.7268 2.67475 12.6454 2.4006 12.1451C1.99414 11.4239 1.77886 10.0053 1.77886 7.60229C1.77886 5.20069 1.99299 3.78995 2.39728 3.06551C2.6757 2.55746 2.84153 2.47582 3.71406 2.42385C4.63792 2.36013 7.00744 2.32306 9.56663 2.32306C12.1203 2.32306 14.4887 2.36014 15.4055 2.42334ZM7.83409 4.96427L12.1594 7.60511L7.83409 10.246V4.96427Z" fill="black"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="alcher-logo">
+                        <div class="logo-img">
+                            <img src="{% static 'vogue/images/alcherlogo.png' %}" alt="alcheringa logo">
+                        </div>
+                        <div class="logo-text">
+                            <div class="logo-text-IITG">
+                                IIT GUWAHATI’S
+                            </div>
+                            <div class="logo-text-alcher">
+                                ALCHERINGA ’25
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="fu-link-and-logo-mobile">
+                  <div class="alcher-logo-m">
+                    <div class="logo-img-m">
+                        <img src="{% static 'vogue/images/alcherlogo.png' %}" alt="alcheringa logo">
+                    </div>
+                    <div class="logo-text-m">
+                        <div class="logo-text-IITG-m">
+                            IIT GUWAHATI’S
+                        </div>
+                        <div class="logo-text-alcher-m">
+                            ALCHERINGA ’25
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="fu-link">
+                    <div class="follow-us">Follow us</div>
+                    <div class="flexit">
+                      <div class="links">
+                        <svg  viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1905 4.01267L20.4143 4.15812L19.8642 5.28004C19.5959 5.82716 19.3274 6.37428 19.0586 6.92139C19.0267 7.03727 18.9707 7.13886 18.8879 7.27113C18.8532 7.32639 18.735 7.50218 18.7294 7.51062C18.6982 7.55828 18.6751 7.59586 18.6585 7.62598V9.72856C18.6585 15.1088 13.5417 18.5278 8.70955 18.5278C7.72077 18.5278 6.96952 18.4796 6.10929 18.2885C4.69364 17.9742 3.64011 17.3493 3.15802 16.2571L2.66169 15.1327L3.8679 15.0199C4.95909 14.9177 5.90518 14.7062 6.63173 14.4229C4.63708 14.0965 3.51929 13.205 3.51929 11.5308V10.6505H4.38434C4.5744 10.6505 4.74578 10.6348 4.899 10.606C3.40199 9.69522 2.65218 8.23408 2.65218 6.20744C2.65202 6.12106 2.65202 6.12106 2.65151 6.0287C2.64588 5.00717 2.6998 4.46135 2.97461 3.76472C3.15073 3.31825 3.4053 2.90494 3.74792 2.52623L4.4007 1.80469L5.03536 2.54278C7.12685 4.97512 9.19433 6.45077 11.3053 6.62927C11.3143 4.38483 12.9812 2.68631 15.1981 2.68631C16.2316 2.68631 17.1691 3.08551 17.9059 3.80533C18.3091 3.88964 18.7373 3.95882 19.1905 4.01267ZM17.278 5.46881L17.0128 5.40771L16.8297 5.2032C16.3869 4.70872 15.831 4.44725 15.1982 4.44725C13.9326 4.44725 13.0354 5.36484 13.0354 6.64796C13.0354 6.85765 13.03 6.98941 13.0044 7.16259C12.9019 7.85363 12.521 8.40852 11.7378 8.40852C9.1443 8.40852 6.80458 6.9947 4.52304 4.57996C4.40542 4.94381 4.37776 5.31781 4.38162 6.01921C4.38214 6.11302 4.38214 6.11302 4.38232 6.20782C4.38232 8.01064 5.10006 8.99677 6.79949 9.54643L7.4025 9.74147V10.3854C7.4025 11.1662 6.67557 11.9011 5.61196 12.2304C6.09953 12.6068 7.09666 12.8099 8.70989 12.8099H9.57494V13.6902C9.57494 14.9514 8.15083 15.9389 5.99956 16.4546C6.70114 16.6733 7.63529 16.7676 8.70959 16.7676C12.7013 16.7676 16.9284 13.9431 16.9284 9.72894V7.52824C16.9284 7.26963 17.0021 7.04515 17.1245 6.81175C17.1723 6.72049 17.225 6.6335 17.29 6.53427C17.3023 6.51559 17.3477 6.4479 17.3837 6.39379L17.4523 6.25426C17.5634 6.02817 17.6745 5.80208 17.7855 5.57599C17.6129 5.54274 17.4438 5.50701 17.278 5.46881Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div class="links">
+                        <svg  viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.63306 0.804688H16.4739C17.4294 0.804688 18.204 1.59292 18.204 2.56525V16.6498C18.204 17.6221 17.4294 18.4103 16.4739 18.4103H2.63306C1.67755 18.4103 0.902954 17.6221 0.902954 16.6498V2.56525C0.902954 1.59292 1.67755 0.804688 2.63306 0.804688ZM2.633 2.56525V16.6498H16.4738V2.56525H2.633ZM10.4186 6.96586C9.97069 6.96586 9.4975 7.10517 9.07959 7.36388L8.68846 6.96586H7.82341V13.1278H9.55351V9.60671C9.55351 9.09989 10.0673 8.72643 10.4186 8.72643H11.2836C11.6349 8.72643 12.1487 9.09989 12.1487 9.60671V13.1278H13.8788V9.60671C13.8788 7.9757 12.4895 6.96586 11.2836 6.96586H10.4186ZM6.09328 6.08558C6.57104 6.08558 6.95834 5.69146 6.95834 5.2053C6.95834 4.71913 6.57104 4.32502 6.09328 4.32502C5.61553 4.32502 5.22823 4.71913 5.22823 5.2053C5.22823 5.69146 5.61553 6.08558 6.09328 6.08558ZM5.22823 6.96586V13.1278H6.95834V6.96586H5.22823Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div class="links">
+                        <svg  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.88696 0.804688H15.7278C16.6833 0.804688 17.4579 1.59292 17.4579 2.56525V16.6498C17.4579 17.6221 16.6833 18.4103 15.7278 18.4103H1.88696C0.931454 18.4103 0.15686 17.6221 0.15686 16.6498V2.56525C0.15686 1.59292 0.931454 0.804688 1.88696 0.804688ZM1.88691 2.56525V16.6498H15.7277V2.56525H1.88691ZM8.05753 9.61058H9.67253V14.8884H11.4026V9.61058H13.1175V7.85001H11.4026V6.96586C11.4026 6.4797 11.7899 6.08558 12.2677 6.08558H13.1327V4.32502H12.2677C10.8344 4.32502 9.67253 5.50736 9.67253 6.96586V7.85001H8.05753V9.61058Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div class="links">
+                        <svg  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6541 5.2061H13.3842V9.60751C13.3842 11.7826 13.5481 12.2484 14.2493 12.2484C15.3776 12.2484 15.9794 11.7054 15.9794 9.60751C15.9794 4.95139 13.6844 2.56525 9.05905 2.56525C6.06248 2.56563 3.40657 4.52851 2.47923 7.42815C1.55189 10.3278 2.5638 13.5054 4.98619 15.3004C7.40858 17.0954 10.691 17.0999 13.1183 15.3117L14.1328 16.7378C11.0988 18.9731 6.99574 18.9673 3.96776 16.7236C0.939773 14.4798 -0.325124 10.5079 0.834057 6.88331C1.99324 3.25876 5.31311 0.805167 9.05894 0.804688C14.6484 0.804688 17.7095 3.98743 17.7095 9.60751C17.7095 12.728 16.2898 14.0089 14.2493 14.0089C13.0867 14.0089 12.4214 13.6275 12.0562 12.7807C11.2788 13.5413 10.2225 14.0089 9.05887 14.0089C6.67009 14.0089 4.73361 12.0383 4.73361 9.60751C4.73361 7.17667 6.67009 5.2061 9.05887 5.2061C10.0326 5.2061 10.9312 5.53354 11.6541 6.08611V5.2061ZM11.6541 9.60671C11.6541 11.0652 10.4922 12.2476 9.05896 12.2476C7.62569 12.2476 6.4638 11.0652 6.4638 9.60671C6.4638 8.14821 7.62569 6.96586 9.05896 6.96586C10.4922 6.96586 11.6541 8.14821 11.6541 9.60671Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div class="links">
+                        <svg  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7714 0.806641H5.85096C2.98443 0.806641 0.660645 3.17133 0.660645 6.08833V13.1306C0.660645 16.0476 2.98443 18.4123 5.85096 18.4123H12.7714C15.6379 18.4123 17.9617 16.0476 17.9617 13.1306V6.08833C17.9617 3.17133 15.6379 0.806641 12.7714 0.806641ZM2.39069 6.08833C2.39069 4.14367 3.93988 2.5672 5.8509 2.5672H12.7713C14.6823 2.5672 16.2315 4.14367 16.2315 6.08833V13.1306C16.2315 15.0753 14.6823 16.6517 12.7713 16.6517H5.8509C3.93988 16.6517 2.39069 15.0753 2.39069 13.1306V6.08833ZM9.31118 14.0101C6.92241 14.0101 4.98592 12.0395 4.98592 9.60866C4.98592 7.17783 6.92241 5.20725 9.31118 5.20725C11.7 5.20725 13.6364 7.17783 13.6364 9.60866C13.6364 12.0395 11.7 14.0101 9.31118 14.0101ZM9.31118 12.2487C10.7444 12.2487 11.9063 11.0664 11.9063 9.60786C11.9063 8.14936 10.7444 6.96702 9.31118 6.96702C7.87792 6.96702 6.71603 8.14936 6.71603 9.60786C6.71603 11.0664 7.87792 12.2487 9.31118 12.2487ZM14.5017 5.20566C14.5017 5.69182 14.1144 6.08594 13.6366 6.08594C13.1589 6.08594 12.7716 5.69182 12.7716 5.20566C12.7716 4.71949 13.1589 4.32537 13.6366 4.32537C14.1144 4.32537 14.5017 4.71949 14.5017 5.20566Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div class="links">
+                        <svg  viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2362 12.9993C18.8273 11.9684 19.0799 10.3062 19.0799 7.60229C19.0799 4.90914 18.8297 3.25659 18.2323 2.19809C17.6336 1.09891 16.9235 0.750028 15.5144 0.666286C14.5523 0.599932 12.1614 0.5625 9.56659 0.5625C6.96619 0.5625 4.57418 0.599918 3.60494 0.666806C2.20365 0.750227 1.49344 1.09988 0.889477 2.20211C0.300768 3.25696 0.0487061 4.91758 0.0487061 7.61215C0.0487061 10.2914 0.301989 11.9604 0.894651 13.0118C1.49076 14.0998 2.18965 14.4453 3.60286 14.5463C4.61857 14.6067 7.14595 14.647 9.56659 14.647C11.9818 14.647 14.5079 14.6067 15.5144 14.5469C16.9406 14.4453 17.6393 14.0993 18.2362 12.9993ZM15.4055 2.42334C16.287 2.47576 16.4504 2.55638 16.7298 3.07098C17.1366 3.78785 17.3498 5.19077 17.3498 7.61215C17.3498 10.0152 17.1355 11.4258 16.7317 12.1303C16.4514 12.6465 16.289 12.7269 15.4035 12.79C14.4509 12.8466 11.9493 12.8864 9.56663 12.8864C7.17862 12.8864 4.6757 12.8466 3.71401 12.7894C2.83942 12.7268 2.67475 12.6454 2.4006 12.1451C1.99414 11.4239 1.77886 10.0053 1.77886 7.60229C1.77886 5.20069 1.99299 3.78995 2.39728 3.06551C2.6757 2.55746 2.84153 2.47582 3.71406 2.42385C4.63792 2.36013 7.00744 2.32306 9.56663 2.32306C12.1203 2.32306 14.4887 2.36014 15.4055 2.42334ZM7.83409 4.96427L12.1594 7.60511L7.83409 10.246V4.96427Z" fill="black"/>
+                        </svg>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="fu-contact">Contact us
+                    <div class="fu-profile">
+                        <img src="{% static 'vogue/images/profile.png' %}" alt="contact profile">
+                    </div>
+                    <div class="fu-profile-name">
+                        Chitti harsh vardhan
+                    </div>
+                    <div class="fu-profile-id-and-contact">
+                        . pd@alcheringa.in . +91 365124892 .
+                    </div>
+                </div>
+                <div class="fu-vougenation">
+                    VOGUE NATION
+                    <p class="fu-copyrights">
+                        COPYRIGHT © 2025 ALCHERINGA. ALL RIGHTS RESERVED
+                    </p>
+                    <p class="fu-designby">
+                        Designed by Team Creatives. Developed by Team WebOps.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://kit.fontawesome.com/e8ab452149.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textfit/2.4.0/textFit.min.js" integrity="sha512-vLs5rAqfvmv/IpN7JustROkGAvjK/L+vgVDFe7KpdtLztqF8mZDfleK2MZj/xuOrWjma0pW+lPCMcBbPKJVC7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'core/vogue.js' %}"></script>
+</body>
 </html>
+
+{% comment %}
+<!-- templates/landing.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">
+        <a href="#"><img src="#" alt="Logo" style="height:40px;"></a>
+    </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <a href="{% url 'register' %}" class="cta">Register Now</a>
+</div>
+
+<div class="container">
+    <h1>Welcome to the Registration Portal</h1>
+    <p>Click the button below to register your team!</p>
+    <a href="{% url 'register' %}"><button class="btn">Register Now</button></a>
+</div>
+
+</body>
+</html> -->
+{% endcomment %}
