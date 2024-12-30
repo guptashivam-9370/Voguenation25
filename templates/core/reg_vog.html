@@ -22,19 +22,19 @@
 					<div class="navleft">
 						<div class="navAlcher">ALCHERINGA '25</div>
 						<ul class="navlist">
-							<li><a href="#home-start">HOME</a></li>
-							<li><a href="#home-end">CONTACT US</a></li>
+							<li><a href="{% url 'Vogue-Home' %}">HOME</a></li>
+							<li><a href="{% url 'Vogue-Home' %}">CONTACT US</a></li>
 						</ul>
 					</div>
 					<div class="navright">
 						<div class="navbtn">
 							<button id="navbtn1">
-								REGISTER
+								REGISTERING...
 							</button>
 						</div>
 						<div class="navmenu">
-							<div class="navmenubar" id="navmenubar-1">|</div>
-							<div class="navmenubar" id="navmenubar-2">|</div>
+							<div class="navmenubar" id="navmenubar-1"></div>
+							<div class="navmenubar" id="navmenubar-2"></div>
 						</div>
 					</div>
 				</div>
@@ -43,16 +43,6 @@
 					<div class="navlogoimage"></div>
 				</div>
 			</nav>
-			<div class="sidebar">
-				<ul class="sidebarlist">
-					<li>HOME</li>
-					<li>GLAMOUR NOVA</li>
-					<li>STATE OF DRESS</li>
-					<li>HAUTE COUTURE</li>
-					<li>GALLERY</li>
-					<li>CONTACT US</li>
-				</ul>
-			</div>
 		</header>
 		<main>
 			<div class="events">
@@ -93,7 +83,7 @@
 				</div>
 				<div class="leader">
 					<div class="leader-text">
-						<p class="txt-1">LEADER DETAILS</p>
+						<p class="txt-1 bold">LEADER DETAILS</p>
 					</div>
 				</div>
 				<div id="add-container_2">
@@ -159,7 +149,7 @@
 					<div class="gap-1"></div>
 					<div class="leader">
 						<div class="leader-text">
-							<p class="txt-1">MEMBER 1 DETAILS</p>
+							<p class="txt-1 bold">MEMBER 1 DETAILS</p>
 						</div>
 					</div>
 					<div class="form-container">
@@ -187,7 +177,7 @@
 							<div class="team_name">
 								<p class="txt-1">CONTACT NO.&nbsp;<a>*</a></p>
 								<input
-									id="phone"
+									id="phone-1"
 									class="input-box phone1 ibox"
 									type="tel"
 									placeholder="ENTER NUMBER..."
@@ -273,9 +263,25 @@
 		});
 	</script>
 	<script>
-		document.getElementById('item_').addEventListener('click', function() {
-		    window.location.href = '/';
+		document.getElementById('navbtn1').addEventListener('click', function() {
+		    window.location.href = '/#home-end';
 		});
+		
+		// Get all anchor elements inside 'events-name' divs
+const eventLinks = document.querySelectorAll('.events-name a');
+
+// Add click event listeners to all anchor elements
+eventLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default navigation (optional)
+
+        // Remove underline from all links
+        eventLinks.forEach(link => link.style.textDecoration = 'none');
+
+        // Add underline to the clicked link
+        link.style.textDecoration = 'underline';
+    });
+});
 
 		document.getElementById('press-1').addEventListener("click", addPage);
 		document.getElementById('press-2').addEventListener("click", deletePage);
@@ -287,7 +293,7 @@
 			var code = `
 		  <div class="leader">
 		      <div class="leader-text">
-		          <p class="txt-1">MEMBER ${count} DETAILS</p>
+		          <p class="txt-1 bold">MEMBER ${count} DETAILS</p>
 		      </div>
 		  </div>
 		  <div class="form-container">
@@ -374,26 +380,26 @@
 		    }
 		}
 
-		const linkPage = window.location.pathname;
-		const com1 = document.getElementById("com1");
-		const com2 = document.getElementById("com2");
-		const com3 = document.getElementById("com3");
+		// const linkPage = window.location.pathname;
+		// const com1 = document.getElementById("com1");
+		// const com2 = document.getElementById("com2");
+		// const com3 = document.getElementById("com3");
 
-		function addClassOnClick(element1, element2, element3) {
-		    element1.classList.add("comm");
-		    element2.classList.remove("comm");
-		    element3.classList.remove("comm");
+		// function addClassOnClick(element1, element2, element3) {
+		//     element1.classList.add("comm");
+		//     element2.classList.remove("comm");
+		//     element3.classList.remove("comm");
 
-		};
-		if (linkPage == com1.firstElementChild.pathname) {
-		addClassOnClick(com1, com2, com3);
-		}
-		if (linkPage == com2.firstElementChild.pathname) {
-		    addClassOnClick(com2, com1, com3);
-		}
-		if (linkPage== com3.firstElementChild.pathname) {
-		    addClassOnClick(com3, com1, com2);
-		}
+		// };
+		// if (linkPage == com1.firstElementChild.pathname) {
+		// addClassOnClick(com1, com2, com3);
+		// }
+		// if (linkPage == com2.firstElementChild.pathname) {
+		//     addClassOnClick(com2, com1, com3);
+		// }
+		// if (linkPage== com3.firstElementChild.pathname) {
+		//     addClassOnClick(com3, com1, com2);
+		// }
 		const popup = document.querySelectorAll('.black')[0]
 		popup.addEventListener("click", function(){
 		    popup.style.display="none";
