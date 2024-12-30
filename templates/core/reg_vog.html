@@ -1,0 +1,433 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Registration</title>
+		<link rel="stylesheet" type="text/css" href="{% static "core/reg_vog.css" %}
+		">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
+		/>
+		<link rel="icon" type="image/x-icon" href="{% static "core/Group 19.png"%}">
+	</head>
+
+	<body>
+		<div class="container-1">
+			<div class="header">
+				<div class="logo-container">
+					<img src="{% static "core/Group 19.png" %}" class="logo">
+				</div>
+				<p class="name-1">REGISTRATIONS</p>
+				<button class="back" id="item_">BACK</button>
+			</div>
+		</div>
+		<div class="events">
+			<div class="container-2">
+				<div class="events-name" id="com1">
+					<a class="competition" href="/register/Haute_Couture/"
+						>Haute Couture</a
+					>
+				</div>
+				<div class="events-name comm" id="com2">
+					<a class="competition" href="/register/States_of_Dress/"
+						>States of Dress</a
+					>
+				</div>
+				<div class="events-name" id="com3">
+					<a class="competition" href="/register/Glamour_Nova/">Glamour Nova</a>
+				</div>
+			</div>
+		</div>
+		<form name="reg-form" id="add-container" method="POST">
+			{% csrf_token %}
+			<div style="width: 100%; display: flex; padding-top: 20px">
+				<div class="sign"></div>
+				<div class="sign">
+					all fields marked with <span style="color: red">*</span> are mandatory
+				</div>
+			</div>
+			<div class="team_container">
+				<div class="team_name">
+					<div class="txt-1">TEAM NAME&nbsp;<a>*</a></div>
+					<input type="text" class="input-box" name="team_name" />
+				</div>
+				<div class="buffer"></div>
+				<div class="team_name">
+					<div class="txt-1">SUBMIT YOUR PERFORMANCE(s)&nbsp;<a>*</a></div>
+					<input type="text" class="input-box" name="performance" />
+				</div>
+			</div>
+			<div class="leader">
+				<div class="leader-text">
+					<p class="txt-1">LEADER DETAILS</p>
+				</div>
+			</div>
+			<div id="add-container_2">
+				<div class="form-container">
+					<div class="team_container">
+						<div class="team_name">
+							<p class="txt-1">FULL NAME&nbsp;<a>*</a></p>
+							<input
+								class="input-box ibox"
+								type="text"
+								name="name"
+								placeholder="ENTER YOUR NAME..."
+							/>
+						</div>
+						<div class="buffer"></div>
+						<div class="team_name">
+							<p class="txt-1">GENDER&nbsp;<a>*</a></p>
+							<select id="select" class="input-box" name="gender">
+								<option value="m">Male</option>
+								<option value="f">Female</option>
+								<option value="o">Others</option>
+							</select>
+						</div>
+					</div>
+					<div class="team_container">
+						<div class="team_name">
+							<p class="txt-1">CONTACT NO.&nbsp;<a>*</a></p>
+							<input
+								id="phone"
+								class="input-box phone1 ibox"
+								type="tel"
+								placeholder="ENTER NUMBER..."
+								name="Phone_Number"
+							/>
+						</div>
+						<div class="buffer"></div>
+						<div class="team_name">
+							<p class="txt-1">EMAIL ADDRESS&nbsp;<a>*</a></p>
+							<input
+								class="input-box ibox"
+								type="email"
+								name="Email"
+								placeholder="ENTER EMAIL ID..."
+							/>
+						</div>
+					</div>
+					<div class="team_container">
+						<div class="team_name">
+							<p class="txt-1">ROLE&nbsp;<a>*</a></p>
+							<select id="select" class="input-box" name="role">
+								{% for role in roles %}
+								<option value="{{ role.id }}">{{ role.name_of_role}}</option>
+								{% endfor %}
+							</select>
+						</div>
+						<div class="buffer"></div>
+						<div class="team_name">
+							<p class="txt-1">CITY&nbsp;<a>*</a></p>
+							<input class="input-box" type="text" name="your_city" />
+						</div>
+					</div>
+				</div>
+				<div class="gap-1"></div>
+				<div class="leader">
+					<div class="leader-text">
+						<p class="txt-1">MEMBER 1 DETAILS</p>
+					</div>
+				</div>
+				<div class="form-container">
+					<div class="team_container">
+						<div class="team_name">
+							<p class="txt-1">FULL NAME&nbsp;<a>*</a></p>
+							<input
+								class="input-box ibox"
+								type="text"
+								name="name"
+								placeholder="ENTER YOUR NAME..."
+							/>
+						</div>
+						<div class="buffer"></div>
+						<div class="team_name">
+							<p class="txt-1">GENDER&nbsp;<a>*</a></p>
+							<select id="select" class="input-box" name="gender">
+								<option value="m">Male</option>
+								<option value="f">Female</option>
+								<option value="o">Others</option>
+							</select>
+						</div>
+					</div>
+					<div class="team_container">
+						<div class="team_name">
+							<p class="txt-1">CONTACT NO.&nbsp;<a>*</a></p>
+							<input
+								id="phone"
+								class="input-box phone1 ibox"
+								type="tel"
+								placeholder="ENTER NUMBER..."
+								name="Phone_Number"
+							/>
+						</div>
+						<div class="buffer"></div>
+						<div class="team_name">
+							<p class="txt-1">EMAIL ADDRESS&nbsp;<a>*</a></p>
+							<input
+								class="input-box ibox"
+								type="email"
+								name="Email"
+								placeholder="ENTER EMAIL ID..."
+							/>
+						</div>
+					</div>
+					<div class="team_container">
+						<div class="team_name">
+							<p class="txt-1">ROLE&nbsp;<a>*</a></p>
+							<select id="select" class="input-box" name="role">
+								{% for role in roles %}
+								<option value="{{ role.id }}">{{ role.name_of_role}}</option>
+								{% endfor %}
+							</select>
+						</div>
+						<div class="buffer"></div>
+						<div class="team_name"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="member-container">
+				<div class="member-box">
+					<button type="button" class="btn" id="press-1">
+						<p class="txt-add">+ ADD MEMBER</p>
+					</button>
+					<button type="button" class="btn" id="press-2">
+						<p class="txt-add">- REMOVE MEMBER</p>
+					</button>
+				</div>
+			</div>
+		</form>
+		<div class="register-box">
+			<button class="btn-2"><p class="txt-reg">REGISTER</p></button>
+		</div>
+		{% comment %}
+		<div class="black" style="display: none">
+			<div class="popup">
+				<div class="atn">Attention</div>
+				<div class="dis"></div>
+				<button id="cls">CLOSE</button>
+			</div>
+		</div>
+		{% endcomment %}
+		<div class="black">
+			<div class="popup">
+				<div class="atn">Attention</div>
+				<div class="dis"></div>
+				<button id="cls">CLOSE</button>
+			</div>
+		</div>
+	</body>
+	<script></script>
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+	<script>
+		const input = document.querySelector('#phone');
+		window.intlTelInput(input, {
+			utilsScript:
+				'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js',
+			initialCountry: 'in',
+			separateDialCode: true,
+		});
+
+		const input_1 = document.querySelector('#phone-1');
+		window.intlTelInput(input_1, {
+			utilsScript:
+				'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js',
+			initialCountry: 'in',
+			separateDialCode: true,
+		});
+	</script>
+	<script>
+		document.getElementById('item_').addEventListener('click', function() {
+		    window.location.href = '/';
+		});
+
+		document.getElementById('press-1').addEventListener("click", addPage);
+		document.getElementById('press-2').addEventListener("click", deletePage);
+		const container = document.getElementById('add-container_2');
+		let removeBtn = document.getElementById('press-2');
+		var count = 1;
+		function addPage() {
+		    count++;
+			var code = `
+		  <div class="leader">
+		      <div class="leader-text">
+		          <p class="txt-1">Member ${count} Details</p>
+		      </div>
+		  </div>
+		  <div class="form-container">
+		      <div class="team_container">
+		          <div class="team_name">
+		              <p class="txt-1">FULL NAME&nbsp;<a>*</a></p>
+		              <input
+		                  class="input-box ibox"
+		                  type="text"
+		                  name="name"
+		                  placeholder="ENTER YOUR NAME..."
+		              />
+		          </div>
+		          <div class="buffer"></div>
+		          <div class="team_name">
+		              <p class="txt-1">GENDER&nbsp;<a>*</a></p>
+		              <select id="select" class="input-box" name="gender">
+		                  <option value="m">Male</option>
+		                  <option value="f">Female</option>
+		                  <option value="o">Others</option>
+		              </select>
+		          </div>
+		      </div>
+		      <div class="team_container">
+		          <div class="team_name">
+		              <p class="txt-1">CONTACT NO.&nbsp;<a>*</a></p>
+		              <input
+		                  id="phone-${count}"
+		                  class="input-box phone1 ibox"
+		                  type="tel"
+		                  placeholder="ENTER NUMBER..."
+		                  name="Phone_Number"
+		              />
+		          </div>
+		          <div class="buffer"></div>
+		          <div class="team_name">
+		              <p class="txt-1">EMAIL ADDRESS&nbsp;<a>*</a></p>
+		              <input
+		                  class="input-box ibox"
+		                  type="email"
+		                  name="Email"
+		                  placeholder="ENTER EMAIL ID..."
+		              />
+		          </div>
+		      </div>
+		      <div class="team_container">
+		          <div class="team_name">
+		              <p class="txt-1">ROLE&nbsp;<a>*</a></p>
+		              <select id="select" class="input-box" name="role">
+		                  {% for role in roles %}
+		                  <option value="{{ role.id }}">{{ role.name_of_role }}</option>
+		                  {% endfor %}
+		              </select>
+		          </div>
+		          <div class="buffer"></div>
+		          <div class="team_name"></div>
+		      </div>
+		  </div>`;
+
+		container.insertAdjacentHTML("beforeend", code);
+
+		    if (count == 2) {
+		        removeBtn.style.display =   "inline-block";
+		    }
+
+		    const input = document.querySelector(`#phone-${count}`);
+		    window.intlTelInput(input, {
+		        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+		        initialCountry: "in",
+		        separateDialCode: true,
+
+		    });
+		}
+
+		function deletePage() {
+		    count--;
+		    let elm = container.lastElementChild;
+		    let elm2 = container.lastElementChild.previousElementSibling;
+		    container.removeChild(elm);
+		    container.removeChild(elm2);
+
+		    if (count == 1) {
+		        removeBtn.style.display = "none";
+		    }
+		}
+
+		const linkPage = window.location.pathname;
+		const com1 = document.getElementById("com1");
+		const com2 = document.getElementById("com2");
+		const com3 = document.getElementById("com3");
+
+		function addClassOnClick(element1, element2, element3) {
+		    element1.classList.add("comm");
+		    element2.classList.remove("comm");
+		    element3.classList.remove("comm");
+
+		};
+		if (linkPage == com1.firstElementChild.pathname) {
+		addClassOnClick(com1, com2, com3);
+		}
+		if (linkPage == com2.firstElementChild.pathname) {
+		    addClassOnClick(com2, com1, com3);
+		}
+		if (linkPage== com3.firstElementChild.pathname) {
+		    addClassOnClick(com3, com1, com2);
+		}
+		const popup = document.querySelectorAll('.black')[0]
+		popup.addEventListener("click", function(){
+		    popup.style.display="none";
+		});
+
+		document.forms['reg-form'].onsubmit= function(event){
+
+		    let nameInputs = document.querySelectorAll('.ibox');
+		    // let phone = document.querySelectorAll('.name1');
+		    for (var i = 0; i < nameInputs.length; i++) {
+		        if (nameInputs[i].value.trim() === "") {
+		            document.querySelector(".dis").innerHTML = "Enter All necessary details Properly";
+		            document.querySelector(".black").style.display = "block";
+		            event.preventDefault();
+		            return false;
+		        }
+		    }
+		    var numInputs = document.querySelectorAll('input[type="tel"]');
+		    var numcode=document.querySelectorAll('.iti__selected-dial-code');
+		    for (var i = 0; i < numInputs.length; i++) {
+		        if (isNaN(numInputs[i].value.trim()) || numInputs[i].value.trim().length != 10) {
+		            document.querySelector(".dis").innerHTML = "Enter All necessary details Properly";
+		            document.querySelector(".black").style.display = "block";
+		            event.preventDefault();
+		            return false;
+		        }
+		    }
+		    var roleCount = {};
+		    {% for role in roles  %}
+		        roleCount[{{role.id}}] = 0;
+		    {% endfor%}
+		    console.log(roleCount);
+		    const roleDropdowns = document.querySelectorAll('select[name="role"]');
+
+
+		    // Iterate through each role dropdown
+		    roleDropdowns.forEach((dropdown) => {
+		        // Get the selected role value
+		        const selectedRole = dropdown.value;
+
+		        // If the selected role is not empty
+		        if (selectedRole) {
+		            // Increment the count for the selected role in the roleCount object
+		            roleCount[selectedRole] = (roleCount[selectedRole] || 0) + 1;
+		        }
+		    });
+		    console.log(roleCount);
+		    {% for role in roles  %}
+		        var name = "{{role.name_of_role}}";
+		        var minmem = {{role.min_member}};
+		        var maxmem = {{role.max_member}};
+		        if (roleCount[{{role.id}}] < {{role.min_member}}){
+		            document.querySelector(".dis").innerHTML = `The role ${name} requires at least ${minmem} participants`;
+		            document.querySelector(".black").style.display = "block";
+		        event.preventDefault();
+		            return false;
+		        }else if (roleCount[{{role.id}}] > {{role.max_member}}){
+		            document.querySelector(".dis").innerHTML = `The role ${name} requires at most ${maxmem} participants`;
+		            document.querySelector(".black").style.display = "block";
+		            event.preventDefault();
+		            return false;
+		        }
+		    {% endfor%}
+		    for (var i = 0; i < numInputs.length; i++) {
+		          numInputs[i].value = numcode[i].innerHTML + numInputs[i].value;
+		  }
+		        console.log("After role count initialization");
+		}
+	</script>
+</html>
