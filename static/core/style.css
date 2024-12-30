@@ -136,6 +136,7 @@ body {
 	top: 125px;
 	z-index: 5;
 	opacity: 0;
+	padding: 32px;
 }
 .sidebarlist {
 	list-style: none;

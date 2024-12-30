@@ -12,216 +12,248 @@
 			href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
 		/>
 		<link rel="icon" type="image/x-icon" href="{% static 'core/Group 19.png'%}">
+		<link rel="stylesheet" href="{% static 'core/style.css' %}" />
 	</head>
 
 	<body>
-		<div class="container-1">
-			<div class="header">
-				<div class="logo-container">
-					<img src="{% static 'core/Group 19.png' %}" class="logo">
-				</div>
-				<p class="name-1">REGISTRATIONS</p>
-				<button class="back" id="item_">BACK</button>
-			</div>
-		</div>
-		<div class="events">
-			<div class="container-2">
-				<div class="events-name" id="com1">
-					<a class="competition" href="/register/Haute_Couture/"
-						>Haute Couture</a
-					>
-				</div>
-				<div class="events-name comm" id="com2">
-					<a class="competition" href="/register/States_of_Dress/"
-						>States of Dress</a
-					>
-				</div>
-				<div class="events-name" id="com3">
-					<a class="competition" href="/register/Glamour_Nova/">Glamour Nova</a>
-				</div>
-			</div>
-		</div>
-		<form name="reg-form" id="add-container" method="POST" >
-			{% csrf_token %}
-			<div style="width: 100%; display: flex; padding-top: 20px">
-				<div class="sign"></div>
-				<div class="sign">
-					all fields marked with <span style="color: red">*</span> are mandatory
-				</div>
-			</div>
-			<div class="team_container">
-				<div class="team_name">
-					<div class="txt-1">TEAM NAME&nbsp;<a>*</a></div>
-					<input type="text" class="input-box" name="team_name" />
-				</div>
-				<div class="buffer"></div>
-				<div class="team_name">
-					<div class="txt-1">SUBMIT YOUR PERFORMANCE(s)&nbsp;<a>*</a></div>
-					<input type="text" class="input-box" name="performance" />
-				</div>
-			</div>
-			<div class="leader">
-				<div class="leader-text">
-					<p class="txt-1">LEADER DETAILS</p>
-				</div>
-			</div>
-			<div id="add-container_2">
-				<div class="form-container">
-					<div class="team_container">
-						<div class="team_name">
-							<p class="txt-1">FULL NAME&nbsp;<a>*</a></p>
-							<input
-								class="input-box ibox"
-								type="text"
-								name="name"
-								placeholder="ENTER YOUR NAME..."
-							/>
-						</div>
-						<div class="buffer"></div>
-						<div class="team_name">
-							<p class="txt-1">GENDER&nbsp;<a>*</a></p>
-							<select id="select" class="input-box" name="gender">
-								<option value="m">Male</option>
-								<option value="f">Female</option>
-								<option value="o">Others</option>
-							</select>
-						</div>
+		<header>
+			<nav class="navbar" style="opacity: 1;">
+				<div class="navcontent">
+					<div class="navleft">
+						<div class="navAlcher">ALCHERINGA '25</div>
+						<ul class="navlist">
+							<li><a href="#home-start">HOME</a></li>
+							<li><a href="#home-end">CONTACT US</a></li>
+						</ul>
 					</div>
-					<div class="team_container">
-						<div class="team_name">
-							<p class="txt-1">CONTACT NO.&nbsp;<a>*</a></p>
-							<input
-								id="phone"
-								class="input-box phone1 ibox"
-								type="tel"
-								placeholder="ENTER NUMBER..."
-								name="Phone_Number"
-							/>
+					<div class="navright">
+						<div class="navbtn">
+							<button id="navbtn1">
+								REGISTER
+							</button>
 						</div>
-						<div class="buffer"></div>
-						<div class="team_name">
-							<p class="txt-1">EMAIL ID&nbsp;<a>*</a></p>
-							<input
-								class="input-box ibox"
-								type="email"
-								name="Email"
-								placeholder="ENTER EMAIL ID..."
-							/>
-						</div>
-					</div>
-					<div class="team_container">
-						<div class="team_name">
-							<p class="txt-1">ROLE&nbsp;<a>*</a></p>
-							<select id="select" class="input-box" name="role">
-								{% for role in roles %}
-								<option value="{{ role.id }}">{{ role.name_of_role}}</option>
-								{% endfor %}
-							</select>
-						</div>
-						<div class="buffer"></div>
-						<div class="team_name">
-							<p class="txt-1">CITY&nbsp;<a>*</a></p>
-							<input class="input-box" type="text" name="your_city" />
+						<div class="navmenu">
+							<div class="navmenubar" id="navmenubar-1">|</div>
+							<div class="navmenubar" id="navmenubar-2">|</div>
 						</div>
 					</div>
 				</div>
-				<div class="gap-1"></div>
+				<div class="navlogo">
+					<div class="navlogotext">VOGUE NATION</div>
+					<div class="navlogoimage"></div>
+				</div>
+			</nav>
+			<div class="sidebar">
+				<ul class="sidebarlist">
+					<li>HOME</li>
+					<li>GLAMOUR NOVA</li>
+					<li>STATE OF DRESS</li>
+					<li>HAUTE COUTURE</li>
+					<li>GALLERY</li>
+					<li>CONTACT US</li>
+				</ul>
+			</div>
+		</header>
+		<main>
+			<div class="events">
+				<div class="container-2">
+					<div class="events-name" id="com1">
+						<a class="competition" href="/register/Haute_Couture/"
+							>Haute Couture</a
+						>
+					</div>
+					<div class="events-name comm" id="com2">
+						<a class="competition" href="/register/States_of_Dress/"
+							>States of Dress</a
+						>
+					</div>
+					<div class="events-name" id="com3">
+						<a class="competition" href="/register/Glamour_Nova/">Glamour Nova</a>
+					</div>
+				</div>
+			</div>
+			<form name="reg-form" id="add-container" method="POST" >
+				{% csrf_token %}
+				<div style="width: 100%; display: flex; padding-top: 20px">
+					<div class="sign"></div>
+					<div class="sign">
+						all fields marked with <span style="color: red">*</span> are mandatory
+					</div>
+				</div>
+				<div class="team_container">
+					<div class="team_name">
+						<div class="txt-1">TEAM NAME&nbsp;<a>*</a></div>
+						<input type="text" class="input-box" name="team_name" />
+					</div>
+					<div class="buffer"></div>
+					<div class="team_name">
+						<div class="txt-1">SUBMIT YOUR PERFORMANCE(s)&nbsp;<a>*</a></div>
+						<input type="text" class="input-box" name="performance" />
+					</div>
+				</div>
 				<div class="leader">
 					<div class="leader-text">
-						<p class="txt-1">MEMBER 1 DETAILS</p>
+						<p class="txt-1">LEADER DETAILS</p>
 					</div>
 				</div>
-				<div class="form-container">
-					<div class="team_container">
-						<div class="team_name">
-							<p class="txt-1">FULL NAME&nbsp;<a>*</a></p>
-							<input
-								class="input-box ibox"
-								type="text"
-								name="name"
-								placeholder="ENTER YOUR NAME..."
-							/>
+				<div id="add-container_2">
+					<div class="form-container">
+						<div class="team_container">
+							<div class="team_name">
+								<p class="txt-1">FULL NAME&nbsp;<a>*</a></p>
+								<input
+									class="input-box ibox"
+									type="text"
+									name="name"
+									placeholder="ENTER YOUR NAME..."
+								/>
+							</div>
+							<div class="buffer"></div>
+							<div class="team_name">
+								<p class="txt-1">GENDER&nbsp;<a>*</a></p>
+								<select id="select" class="input-box" name="gender">
+									<option value="m">Male</option>
+									<option value="f">Female</option>
+									<option value="o">Others</option>
+								</select>
+							</div>
 						</div>
-						<div class="buffer"></div>
-						<div class="team_name">
-							<p class="txt-1">GENDER&nbsp;<a>*</a></p>
-							<select id="select" class="input-box" name="gender">
-								<option value="m">Male</option>
-								<option value="f">Female</option>
-								<option value="o">Others</option>
-							</select>
+						<div class="team_container">
+							<div class="team_name">
+								<p class="txt-1">CONTACT NO.&nbsp;<a>*</a></p>
+								<input
+									id="phone"
+									class="input-box phone1 ibox"
+									type="tel"
+									placeholder="ENTER NUMBER..."
+									name="Phone_Number"
+								/>
+							</div>
+							<div class="buffer"></div>
+							<div class="team_name">
+								<p class="txt-1">EMAIL ID&nbsp;<a>*</a></p>
+								<input
+									class="input-box ibox"
+									type="email"
+									name="Email"
+									placeholder="ENTER EMAIL ID..."
+								/>
+							</div>
+						</div>
+						<div class="team_container">
+							<div class="team_name">
+								<p class="txt-1">ROLE&nbsp;<a>*</a></p>
+								<select id="select" class="input-box" name="role">
+									{% for role in roles %}
+									<option value="{{ role.id }}">{{ role.name_of_role}}</option>
+									{% endfor %}
+								</select>
+							</div>
+							<div class="buffer"></div>
+							<div class="team_name">
+								<p class="txt-1">CITY&nbsp;<a>*</a></p>
+								<input class="input-box" type="text" name="your_city" />
+							</div>
 						</div>
 					</div>
-					<div class="team_container">
-						<div class="team_name">
-							<p class="txt-1">CONTACT NO.&nbsp;<a>*</a></p>
-							<input
-								id="phone"
-								class="input-box phone1 ibox"
-								type="tel"
-								placeholder="ENTER NUMBER..."
-								name="Phone_Number"
-							/>
-						</div>
-						<div class="buffer"></div>
-						<div class="team_name">
-							<p class="txt-1">EMAIL ID&nbsp;<a>*</a></p>
-							<input
-								class="input-box ibox"
-								type="email"
-								name="Email"
-								placeholder="ENTER EMAIL ID..."
-							/>
+					<div class="gap-1"></div>
+					<div class="leader">
+						<div class="leader-text">
+							<p class="txt-1">MEMBER 1 DETAILS</p>
 						</div>
 					</div>
-					<div class="team_container">
-						<div class="team_name">
-							<p class="txt-1">ROLE&nbsp;<a>*</a></p>
-							<select id="select" class="input-box" name="role">
-								{% for role in roles %}
-								<option value="{{ role.id }}">{{ role.name_of_role}}</option>
-								{% endfor %}
-							</select>
+					<div class="form-container">
+						<div class="team_container">
+							<div class="team_name">
+								<p class="txt-1">FULL NAME&nbsp;<a>*</a></p>
+								<input
+									class="input-box ibox"
+									type="text"
+									name="name"
+									placeholder="ENTER YOUR NAME..."
+								/>
+							</div>
+							<div class="buffer"></div>
+							<div class="team_name">
+								<p class="txt-1">GENDER&nbsp;<a>*</a></p>
+								<select id="select" class="input-box" name="gender">
+									<option value="m">Male</option>
+									<option value="f">Female</option>
+									<option value="o">Others</option>
+								</select>
+							</div>
 						</div>
-						<div class="buffer"></div>
-						<div class="team_name"></div>
+						<div class="team_container">
+							<div class="team_name">
+								<p class="txt-1">CONTACT NO.&nbsp;<a>*</a></p>
+								<input
+									id="phone"
+									class="input-box phone1 ibox"
+									type="tel"
+									placeholder="ENTER NUMBER..."
+									name="Phone_Number"
+								/>
+							</div>
+							<div class="buffer"></div>
+							<div class="team_name">
+								<p class="txt-1">EMAIL ID&nbsp;<a>*</a></p>
+								<input
+									class="input-box ibox"
+									type="email"
+									name="Email"
+									placeholder="ENTER EMAIL ID..."
+								/>
+							</div>
+						</div>
+						<div class="team_container">
+							<div class="team_name">
+								<p class="txt-1">ROLE&nbsp;<a>*</a></p>
+								<select id="select" class="input-box" name="role">
+									{% for role in roles %}
+									<option value="{{ role.id }}">{{ role.name_of_role}}</option>
+									{% endfor %}
+								</select>
+							</div>
+							<div class="buffer"></div>
+							<div class="team_name"></div>
+						</div>
 					</div>
 				</div>
-			</div>
-
-			<div class="member-container">
-				<div class="member-box">
-					<button type="button" class="btn" id="press-1">
-						<p class="txt-add">+ ADD MEMBER</p>
-					</button>
-					<button type="button" class="btn" id="press-2">
-						<p class="txt-add">- REMOVE MEMBER</p>
-					</button>
+	
+				<div class="member-container">
+					<div class="member-box">
+						<button type="button" class="btn" id="press-1">
+							<p class="txt-add">+ ADD MEMBER</p>
+						</button>
+						<button type="button" class="btn" id="press-2">
+							<p class="txt-add">- REMOVE MEMBER</p>
+						</button>
+					</div>
+				</div>
+				<div class="register-box">
+					<button type="submit" class="btn-2"><p class="txt-reg">REGISTER</p></button>
+				</div>
+			</form>
+			
+			{% comment %}
+			<div class="black" style="display: none">
+				<div class="popup">
+					<div class="atn">Attention</div>
+					<div class="dis"></div>
+					<button id="cls">CLOSE</button>
 				</div>
 			</div>
-			<div class="register-box">
-				<button type="submit" class="btn-2"><p class="txt-reg">REGISTER</p></button>
+			{% endcomment %}
+			<div class="black">
+				<div class="popup">
+					<div class="atn">Attention</div>
+					<div class="dis"></div>
+					<button id="cls">CLOSE</button>
+				</div>
 			</div>
-		</form>
-		
-		{% comment %}
-		<div class="black" style="display: none">
-			<div class="popup">
-				<div class="atn">Attention</div>
-				<div class="dis"></div>
-				<button id="cls">CLOSE</button>
-			</div>
-		</div>
-		{% endcomment %}
-		<div class="black">
-			<div class="popup">
-				<div class="atn">Attention</div>
-				<div class="dis"></div>
-				<button id="cls">CLOSE</button>
-			</div>
-		</div>
+		</main>
 	</body>
-	<script></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 	<script>
 		const input = document.querySelector('#phone');
@@ -431,4 +463,64 @@
 		        console.log("After role count initialization");
 		}
 	</script>
+	<script>
+		const sidebarbtn = document.querySelector('.navmenu');
+		const sidebar = document.querySelector('.sidebar');
+		let toggle = false;
+
+		sidebarbtn.addEventListener('click', () => {
+			if (toggle === false) {
+				gsap.fromTo(
+					sidebar,
+					{
+						x: '100%',
+						opacity: 0.7,
+					},
+					{
+						x: '0%',
+						opacity: 1,
+						duration: 1,
+						ease: 'power2.out',
+						onComplete: () => {
+							toggle = true;
+						},
+					}
+				);
+				gsap.to('#navmenubar-1', {
+					rotate: 45,
+					y: '10%',
+					duration: 0.5,
+					ease: 'power2.out',
+				});
+				gsap.to('#navmenubar-2', {
+					rotate: -45,
+					y: '-20%',
+					duration: 0.5,
+					ease: 'power2.out',
+				});
+			} else {
+				gsap.to(sidebar, {
+					x: '100%',
+					opacity: 0.7,
+					duration: 1,
+					ease: 'power2.out',
+					onComplete: () => {
+						toggle = false;
+					},
+				});
+				gsap.to('#navmenubar-1', {
+					rotate: 90,
+					y: '0%',
+					duration: 0.5,
+					ease: 'power2.out',
+				});
+				gsap.to('#navmenubar-2', {
+					rotate: 90,
+					y: '0%',
+					duration: 0.5,
+					ease: 'power2.out',
+				});
+			}
+		});
+		</script>
 </html>
