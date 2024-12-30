@@ -5,20 +5,20 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Registration</title>
-		<link rel="stylesheet" type="text/css" href="{% static "core/reg_vog.css" %}
+		<link rel="stylesheet" type="text/css" href="{% static 'core/reg_vog.css' %}
 		">
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
 		/>
-		<link rel="icon" type="image/x-icon" href="{% static "core/Group 19.png"%}">
+		<link rel="icon" type="image/x-icon" href="{% static 'core/Group 19.png'%}">
 	</head>
 
 	<body>
 		<div class="container-1">
 			<div class="header">
 				<div class="logo-container">
-					<img src="{% static "core/Group 19.png" %}" class="logo">
+					<img src="{% static 'core/Group 19.png' %}" class="logo">
 				</div>
 				<p class="name-1">REGISTRATIONS</p>
 				<button class="back" id="item_">BACK</button>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 		</div>
-		<form name="reg-form" id="add-container" method="POST">
+		<form name="reg-form" id="add-container" method="POST" >
 			{% csrf_token %}
 			<div style="width: 100%; display: flex; padding-top: 20px">
 				<div class="sign"></div>
@@ -100,7 +100,7 @@
 						</div>
 						<div class="buffer"></div>
 						<div class="team_name">
-							<p class="txt-1">EMAIL ADDRESS&nbsp;<a>*</a></p>
+							<p class="txt-1">EMAIL ID&nbsp;<a>*</a></p>
 							<input
 								class="input-box ibox"
 								type="email"
@@ -165,7 +165,7 @@
 						</div>
 						<div class="buffer"></div>
 						<div class="team_name">
-							<p class="txt-1">EMAIL ADDRESS&nbsp;<a>*</a></p>
+							<p class="txt-1">EMAIL ID&nbsp;<a>*</a></p>
 							<input
 								class="input-box ibox"
 								type="email"
@@ -199,10 +199,11 @@
 					</button>
 				</div>
 			</div>
+			<div class="register-box">
+				<button type="submit" class="btn-2"><p class="txt-reg">REGISTER</p></button>
+			</div>
 		</form>
-		<div class="register-box">
-			<button class="btn-2"><p class="txt-reg">REGISTER</p></button>
-		</div>
+		
 		{% comment %}
 		<div class="black" style="display: none">
 			<div class="popup">
@@ -254,7 +255,7 @@
 			var code = `
 		  <div class="leader">
 		      <div class="leader-text">
-		          <p class="txt-1">Member ${count} Details</p>
+		          <p class="txt-1">MEMBER ${count} DETAILS</p>
 		      </div>
 		  </div>
 		  <div class="form-container">
@@ -291,7 +292,7 @@
 		          </div>
 		          <div class="buffer"></div>
 		          <div class="team_name">
-		              <p class="txt-1">EMAIL ADDRESS&nbsp;<a>*</a></p>
+		              <p class="txt-1">EMAIL ID&nbsp;<a>*</a></p>
 		              <input
 		                  class="input-box ibox"
 		                  type="email"
