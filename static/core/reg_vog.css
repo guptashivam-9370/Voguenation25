@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Forum&family=Sen:wght@400..800&display=swap');
 
 @font-face {
@@ -345,7 +346,21 @@ a {
 	border: 1px solid #000;
 	font-family: lemonmilk;
 }
-
+/* .arrow{
+	background: url("{% static 'path/to/Polygon.png' %}") no-repeat right center; /* Use your arrow image 
+    background-size: 1rem;  Adjust size as needed 
+    padding-right: 2rem; Add space for the arrow 
+} */
+.arrow{
+	width: 17vw;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.arrow img{
+	margin-left: -30px;
+	height: 12px;
+	margin-top: 14px;
+}
 .input::placeholder {
 	color: #000;
 
@@ -401,7 +416,7 @@ a {
 
 .register-box {
 	margin: 3.1vw 0vw;
-	width: 100vw;
+	width: 92vw;
 	display: flex;
 	justify-content: center;
 }
@@ -416,7 +431,7 @@ a {
 	border-radius: 10px;
 	border: 1px solid #000;
 	background: black;
-	margin-right: 80px;
+	/* margin-right: 80px; */
 	color: #ecf0ff;
 }
 
@@ -508,8 +523,9 @@ select {
 	border-bottom: 0.45vw solid #555 !important;
 }
 
-/* .comm {
+.comm {
 	text-decoration: underline;
+	text-decoration-color: black;
 	/* content: '';
 	position: absolute;
 	bottom: 0vw;
@@ -517,8 +533,8 @@ select {
 	box-sizing: border-box;
 	width: 70%;
 	border-radius: 3px;
-	z-index: 1000; 
-} */
+	z-index: 1000; */
+}
 .popup {
 	position: fixed;
 	width: 350px;
@@ -588,6 +604,9 @@ select {
 	html{
 		font-size: calc(0.5em + 1.5vw);
 	}
+	.arrow{
+		margin-right: 5vw;
+	}
 	.popup {
 		width: 300px;
 	}
@@ -622,6 +641,7 @@ select {
 		flex-direction: column;
 		align-items: flex-start;
 	}
+	
 	.input-box{
 		width: 80vw;
 	}
