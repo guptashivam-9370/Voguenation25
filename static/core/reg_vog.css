@@ -53,8 +53,12 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+main{
+	overflow: hidden;
+	width: 100vw;
+}
 body {
+	
 	background: #ecf0ff;
 	overflow-x: hidden;
 }
@@ -578,6 +582,9 @@ select {
 	max-width: 50vw;
 }
 @media (max-width: 800px) {
+	header{
+		width: 100%;
+	}
 	html{
 		font-size: calc(0.5em + 1.5vw);
 	}
@@ -586,6 +593,16 @@ select {
 	}
 	.events{
 		margin-top: 8vw;
+	}
+	.team_container{
+		padding: 0vw 6vw;
+	}
+	.team_name{
+		width: 40vw;
+	}
+	.input-box{
+		width: 22vw;
+		justify-content: space-between;
 	}
 }
 @media (max-width: 600px) {
