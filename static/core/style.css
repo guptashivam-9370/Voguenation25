@@ -48,7 +48,7 @@ body{
 .navbar{
     position: fixed;
     height: 125px;
-    width: 102vw;
+    width: 100vw;
     background-color: black;
     z-index: 2;
     display: flex;
