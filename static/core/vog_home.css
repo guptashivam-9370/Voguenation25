@@ -35,6 +35,12 @@
 .fixelement{
     position: fixed;
 }
+.no-scroll{
+    overflow: hidden;
+}
+.blurred{
+    filter: blur(3px);
+}
 
 /* Load body */
 body{
@@ -50,7 +56,7 @@ body{
     height: 125px;
     width: 100vw;
     background-color: black;
-    z-index: 2;
+    z-index: 20;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,14 +90,14 @@ body{
 .navlist li{
     margin: 10px;
     list-style: none;
-    transition: border-bottom 400ms ease-in;
+    cursor: pointer;
 }
-.navbar li a{
+.navbar li{
     text-decoration: none;
     color: white;
     transition: color 200ms ease-in;
 }
-.navlist li:hover a{
+.navlist li:hover{
     color: #bfae93;
 }
 .navbtn button{
@@ -109,7 +115,10 @@ body{
     color: black;
 }
 .navmenu{
-    margin-right: 1.4rem;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    margin-right: 1rem;
     cursor: pointer;
 }
 .navmenu div{
@@ -146,6 +155,7 @@ body{
     top: 125px;
     z-index: 5;
     opacity: 0;
+    transform: translateX(100%);
 }
 .sidebarlist{
     list-style: none;
@@ -158,9 +168,10 @@ body{
     gap: 40px;
     padding: 32px;
 }
-.sidebarlist a{
+.sidebarlist li{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 /* Load Hero-Section */
@@ -183,7 +194,7 @@ body{
     font-family: bigilla;
     font-size: 8rem;
     color: white;
-    z-index: 4;
+    z-index: 21;
 }
 .hero-background{
     position: absolute;
@@ -265,7 +276,7 @@ body{
 }
 .text-container{
     position: absolute;
-    top: 48%;
+    top: 44%;
     right: 4vw;
     text-align: right;
     display: flex;
@@ -280,10 +291,10 @@ body{
 }
 .comp-text{
     height: fit-content;
-    width: 30.25rem;
+    width: 28rem;
     padding: 1rem 0rem 0rem 0rem;
     font-family: lemonmilk;
-    font-size: 1.1rem;
+    font-size: 1.075rem;
 }
 .comp-rulebook{
     font-family: dongle;
@@ -385,6 +396,7 @@ margin-left: 1vw;
 display: flex;
 justify-content: center;
 align-items: center;
+cursor: pointer;
 }
 
 .links svg {
@@ -585,13 +597,17 @@ opacity: 0.7;
         overflow: hidden;
     }
     .hero-background{
-        width: 102vw;
+        width: 104vw;
         height: 121vh;
         left: -5px;
         background-position: 0% 60%;
         filter: blur(1.2px);
     }
+    .hero{
+        width: 100vw;
+    }
     .navbar{
+        width: 102vw;
         position: fixed;
         justify-content: flex-end;
     }
@@ -615,6 +631,7 @@ opacity: 0.7;
     }
     .para{
         top: 25%;
+        left: 8%;
         width: 88%;
         color: #FFF;
         text-align: center;
@@ -624,17 +641,43 @@ opacity: 0.7;
         line-height: 1.25rem;
         letter-spacing: 0.03438rem;
     }
-     .shape-container{
-        height: 54rem;
-        width: 54rem;
+    .competitions-wrapper{
+        height: fit-content;
+        padding-top: 50px;
+        gap: 0px;
+        overflow: visible;
+    }
+    .competitions{
+        height: fit-content;
+        overflow: visible;
+    }
+    .shape-container{
+        height: fit-content;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 0em;
+        overflow: visible;
      }
     .shape{
-        height: 27rem;
-        width: 27rem;
+        height: 32rem;
+        width: 100%;
     }
-    .competitions-wrapper{
-        height: 88vh;
-        padding-top: 150px;
+    #section-2{
+        display: none;
+    }
+    #section-3{
+        transform: none;
+        background-image: url(images/Arch-Shape-2.png);
+        background-size: cover;
+    }
+    #section-4{
+        transform: none;
+        background-image: url(images/Arch-Shape-3.png);
+        background-size: cover;
+    }
+    .text-container{
+        padding: 3rem 0rem;
     }
     .comp-title{
         font-size: 48px;
@@ -645,6 +688,9 @@ opacity: 0.7;
     }
     .comp-rulebook{
         font-size: 24px;
+    }
+    .extra-space{
+        height: 0vh;
     }
     body {
         .vo-gallary {
@@ -824,21 +870,13 @@ opacity: 0.7;
 }
 
 @media (max-width: 400px){
-    .shape-container{
-        height: 48rem;
-        width: 48rem;
+    body{
+        font-size: 4px;
     }
     .shape{
         height: 24rem;
-        width: 24rem;
     }
-    .competitions-wrapper{
-        height: 92vh;
-    }
-}
-
-@media (max-height: 750px){
-    .competitions-wrapper{
-        height: 100vh;
+    .navmenu{
+        scale: 0.7;
     }
 }
