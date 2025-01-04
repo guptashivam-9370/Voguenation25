@@ -168,4 +168,4 @@ EMAIL_HOST_PASSWORD = 'fglbllyrhkhubenx'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if not PROD:  
-    CSRF_TRUSTED_ORIGINS = ['https://vogue.alcheringa.in','https://test.alcheringa.in','https://vntest.alcheringa.in']
+    CSRF_TRUSTED_ORIGINS = ['https://vogue.alcheringa.in','https://test.alcheringa.in','https://newvntest.alcheringa.in']
