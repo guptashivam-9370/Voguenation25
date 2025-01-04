@@ -293,7 +293,8 @@ main{
 }
 
 a {
-	color: red;
+	color: white;
+	text-decoration: none;
 	font-family: var(--font4);
 }
 

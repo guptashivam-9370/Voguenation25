@@ -12,7 +12,7 @@
 			href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
 		/>
 		<link rel="icon" type="image/x-icon" href="{% static 'core/images/VN Logo.png' %}" />
-		<link rel="stylesheet" href="{% static 'core/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'core/vog_home.css' %}" />
 	</head>
 
 	<body>
@@ -488,7 +488,10 @@
 		const sidebarbtn = document.querySelector('.navmenu');
 		const sidebar = document.querySelector('.sidebar');
 		let toggle = false;
-
+		document.body.style.overflow = 'hidden';
+		window.addEventListener('load', () => {
+			document.body.style.overflow = 'auto';
+		});
 		sidebarbtn.addEventListener('click', () => {
 			if (toggle === false) {
 				gsap.fromTo(
@@ -509,13 +512,15 @@
 				);
 				gsap.to('#navmenubar-1', {
 					rotate: 45,
-					y: '10%',
+					x:'2px',
+					y: '17%',
 					duration: 0.5,
 					ease: 'power2.out',
 				});
 				gsap.to('#navmenubar-2', {
 					rotate: -45,
-					y: '-20%',
+					x:'-2px',
+					y: '-17%',
 					duration: 0.5,
 					ease: 'power2.out',
 				});
@@ -531,12 +536,14 @@
 				});
 				gsap.to('#navmenubar-1', {
 					rotate: 90,
+					x: '0%',
 					y: '0%',
 					duration: 0.5,
 					ease: 'power2.out',
 				});
 				gsap.to('#navmenubar-2', {
 					rotate: 90,
+					x: '0%',
 					y: '0%',
 					duration: 0.5,
 					ease: 'power2.out',

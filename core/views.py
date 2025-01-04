@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Role, Competition, Member_Detail, Team
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
+from django.core.mail import send_mail
 def home(request):
     return render(request, 'core/vog_home.html')
 
@@ -71,7 +71,33 @@ def register(request,competition_name):
                 is_leader=(i == 0)  # First member is the leader
             )
             memberdetails.save()
-        
+        message = """
+Greetings from Alcheringa 2025!
+
+We are delighted to confirm your registration for the Rock-o-phonix ,the Flagship Rock band competition of Alcheringa, IIT Guwahati.
+
+
+Event Details:
+    Event Name: Rock-O-Phonix
+    Dates: 30th Jan to 2nd Feb
+    Venue: IIT Guwahati Campus
+
+Kindly ensure you arrive on time and adhere to the rules and guidelines of the tournament, which will be shared with you soon. For any queries, please feel free to reach out at [+91 83072 79038/ rocko@alcheringa.in].
+
+We can't wait to witness your electrifying performance and musical prowess at Rock-O-Phonix, the flagship rock band competition of Alcheringa 2025!
+
+Best regards,
+Ashish kumar,
+Head, Rock-o-phonix,
+Alcheringa 2025,
+IIT Guwahati.
+"""
+        send_mail(
+            'Registration Successful',
+            message,
+            from_email=None,
+            recipient_list=[emails[0]],
+        )
 
         messages.success(request,'Your team has been registered successfully')
         return redirect('Vogue-Home')

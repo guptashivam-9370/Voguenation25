@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="{% static 'core/images/VN Logo.png' %}" />
 </head>
 <body>
+    <div class="blur-overlay"></div>
     <div class="wrapper">
         <header>
             <nav class="navbar">
@@ -52,7 +53,7 @@
         <main>
             <div class="hero-wrapper">
                 <div class="hero-background"></div>
-                <div class="hero">
+                <div class="hero" id="hero">
                     <div class="logo">VOGUE NATION</div>
                     <div class="logo-fixed invisible">VOGUE NATION</div>
                     <p class="para">Vogue Nation, the fashion designing module, newly conceived by the team of Alcheringa 2020 is an attempt to begin the search for the all round champion of the Fashion Designing arena. This will be the race of the elite of the elite. This is where you begin your trek to the top. Three best of the best events especially tailored for the ones destined for greatness. Etch your name into the GOLDEN history of Alcheringa as the ultimate champion of the Fashion Module.</p>
@@ -202,8 +203,12 @@
                     <div class="fu-profile-name">
                         Chitti harsh vardhan
                     </div>
-                    <div class="fu-profile-id-and-contact">
-                        . pd@alcheringa.in . +91 365124892 .
+                    <div class="fu-profile-id-and-contact" style="display: flex; align-items: center; gap:10px">
+                        <img src="{% static 'core/images/circle.svg' %}" alt="circle icon">
+                        <a href="mailto:pd@alcheringa.in" style="color: white; text-decoration: none;">pd@alcheringa.in</a>
+                        <img src="{% static 'core/images/circle.svg' %}" alt="circle icon">
+                        <a href="tel:+917386847545" style="color: white; text-decoration: none;">+91 73868 47545</a>
+                        <img src="{% static 'core/images/circle.svg' %}" alt="circle icon">
                     </div>
                 </div>
                 <div class="fu-vougenation">
@@ -218,6 +223,11 @@
             </footer>
         </div>
     </div>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://kit.fontawesome.com/e8ab452149.js" crossorigin="anonymous"></script>

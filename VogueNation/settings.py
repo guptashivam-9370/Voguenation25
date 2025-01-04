@@ -150,11 +150,18 @@ if not PROD:
     MINIO_STORAGE_ACCESS_KEY = os.environ.get('minio_access')
     MINIO_STORAGE_SECRET_KEY = os.environ.get('minio_secret')
     MINIO_STORAGE_USE_HTTPS = True
-    MINIO_STORAGE_MEDIA_BUCKET_NAME = 'alchervnmedia'
+    MINIO_STORAGE_MEDIA_BUCKET_NAME = 'alchervnomedia'
     MINIO_STORAGE_AUTO_CREATE_MEDIA_BUCKET = True
-    MINIO_STORAGE_STATIC_BUCKET_NAME = 'alchervnstatic'
+    MINIO_STORAGE_STATIC_BUCKET_NAME = 'alchervnostatic'
     MINIO_STORAGE_AUTO_CREATE_STATIC_BUCKET = True
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'no-reply@alcheringa.in'
+EMAIL_HOST_PASSWORD = 'fglbllyrhkhubenx'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

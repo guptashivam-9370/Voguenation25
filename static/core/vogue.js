@@ -251,13 +251,15 @@ window.addEventListener('load', () => {
             });
             gsap.to('#navmenubar-1', {
                 rotate: 45,
-                y: '10%',
+                x:'2px',
+                y: '17%',
                 duration: 0.5,
                 ease: 'power2.out',
             });
             gsap.to('#navmenubar-2', {
                 rotate: -45,
-                y: '-20%',
+                x:'-2px',
+                y: '-17%',
                 duration: 0.5,
                 ease: 'power2.out',
             });
@@ -274,12 +276,14 @@ window.addEventListener('load', () => {
             });
             gsap.to('#navmenubar-1', {
                 rotate: 90,
+                x: '0%',
                 y: '0%',
                 duration: 0.5,
                 ease: 'power2.out',
             });
             gsap.to('#navmenubar-2', {
                 rotate: 90,
+                x: '0%',
                 y: '0%',
                 duration: 0.5,
                 ease: 'power2.out',
@@ -312,12 +316,12 @@ window.addEventListener('load', () => {
 const footerNavList = document.querySelectorAll('.links');
 
 const urlMap = {
-    youtube: "https://www.youtube.com",
-    twitter: "https://twitter.com",
-    linkedin: "https://www.linkedin.com",
-    facebook: "https://www.facebook.com",
-    threads: "https://www.threads.net",
-    instagram: "https://www.instagram.com"
+    youtube: "https://www.youtube.com/@alcheringaIITG",
+    twitter: "https://x.com/alcheringaiitg?lang=en",
+    linkedin: "https://in.linkedin.com/company/alcheringaiitguwahati",
+    facebook: "https://www.facebook.com/alcheringaiitg/",
+    threads: "https://www.threads.net/@alcheringaiitg",
+    instagram: "https://in.linkedin.com/company/alcheringaiitguwahati"
 };
 
 footerNavList.forEach((footerNav) => {
@@ -336,7 +340,7 @@ footerNavList.forEach((footerNav) => {
 const homeBtn = document.querySelector("#home-button");
 homeBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    var targetSection = document.getElementById('home-start');
+    var targetSection = document.getElementById('hero');
     targetSection.scrollIntoView({ behavior: 'smooth' });
 })
 
@@ -349,24 +353,99 @@ contactBtn.addEventListener('click', (event) => {
 
 //Sidebar Navigation
 const sideBarBtns = document.querySelectorAll('.sidebarli');
+
+
+// ...existing code...
+
+const blurOverlay = document.querySelector('.blur-overlay');
+function closeSidebar() {
+    gsap.to(sidebar, {
+        x: '100%',
+        opacity: 0.7,
+        duration: 1,
+        ease: 'power2.out',
+        onComplete: () => { toggle = false; }
+    });
+    gsap.to('#navmenubar-1', {
+        rotate: 90,
+        x: '0%',
+        y: '0%',
+        duration: 0.5,
+        ease: 'power2.out',
+    });
+    gsap.to('#navmenubar-2', {
+        rotate: 90,
+        x: '0%',
+        y: '0%',
+        duration: 0.5,
+        ease: 'power2.out',
+    });
+    gsap.to('body', {
+        overflowY: 'visible',
+    });
+    blurOverlay.style.display = 'none'; // Hide blur overlay
+}
+
+function openSidebar() {
+    gsap.fromTo(sidebar, {
+        x: '100%',
+        opacity: 0.7,
+    }, {
+        x: '0%',
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+        onComplete: () => { toggle = true; }
+    });
+    gsap.to('#navmenubar-1', {
+        rotate: 45,
+        x: '2px',
+        y: '17%',
+        duration: 0.5,
+        ease: 'power2.out',
+    });
+    gsap.to('#navmenubar-2', {
+        rotate: -45,
+        x: '-2px',
+        y: '-17%',
+        duration: 0.5,
+        ease: 'power2.out',
+    });
+    gsap.to('body', {
+        overflow: 'hidden',
+    });
+    blurOverlay.style.display = 'block'; // Show blur overlay
+}
+
+blurOverlay.addEventListener('click', closeSidebar);
+
+sidebarbtn.addEventListener('click', () => {
+    toggle ? closeSidebar() : openSidebar();
+});
 const navMap = {
-    home: "home-start",
-    glamourNova: "section-1",
-    stateOfDress: "section-4",
-    hauteCouture: "section-3",
+    home: "hero",
+    glamourNova: "/register/Glamour_Nova/",
+    stateOfDress: "/register/States_of_Dress/",
+    hauteCouture: "/register/Haute_Couture/",
     gallery: "gallery-gallery",
     contact: "footer",
+    competition: "/register/Haute_Couture/",
 };
-
 sideBarBtns.forEach((sidebarBtn) => {
     sidebarBtn.addEventListener('click', (event) => {
         event.preventDefault();
         const targetId = navMap[sidebarBtn.id];
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+        if (targetId.startsWith('/')) {
+            closeSidebar();
+            window.location.href = targetId;
         } else {
-            console.error(`No section found with ID: ${targetId}`);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                closeSidebar();
+            } else {
+                console.error(`No section found with ID: ${targetId}`);
+            }
         }
     });
 });
