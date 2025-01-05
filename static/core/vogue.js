@@ -180,7 +180,7 @@ window.addEventListener('load', () => {
                 compRulebook1.classList.add('comp-rulebook');
                 const compRulebookLink1 = document.createElement('a');
                 compRulebookLink1.classList.add('comp-rulebook-link');
-                compRulebookLink1.href = 'https://drive.google.com/file/d/1gPem4G8y2oAUFXmIq9-uqRHPON1fm35D/view?pli=1';
+                compRulebookLink1.href = 'https://drive.google.com/file/d/1rrSeDGKgE1nV-3kxVNH832ef8NWc2N-o/view?usp=sharing';
                 compRulebookLink1.target = '_blank';
                 compRulebookLink1.innerText = 'RULEBOOK';
                 compRulebook1.appendChild(compRulebookLink1);
@@ -211,7 +211,7 @@ window.addEventListener('load', () => {
                 compRulebook2.classList.add('comp-rulebook');
                 const compRulebookLink2 = document.createElement('a');
                 compRulebookLink2.classList.add('comp-rulebook-link');
-                compRulebookLink2.href = 'https://drive.google.com/file/d/1gPem4G8y2oAUFXmIq9-uqRHPON1fm35D/view?pli=1';
+                compRulebookLink2.href = 'https://drive.google.com/file/d/1rrSeDGKgE1nV-3kxVNH832ef8NWc2N-o/view?usp=sharing';
                 compRulebookLink2.target = '_blank';
                 compRulebookLink2.innerText = 'RULEBOOK';
                 compRulebook2.appendChild(compRulebookLink2);

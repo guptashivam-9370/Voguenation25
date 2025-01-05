@@ -212,7 +212,7 @@ body{
     top: -10px;
     left: -10px;
     height: 152%;
-    width: 102%;
+    width: 100vw;
     background: #040402 url("images/hero-background.png") no-repeat;
     background-size: cover;
     filter: blur(3px);
@@ -265,7 +265,7 @@ body{
 }
 .shape:nth-child(1){
     grid-area: 1 / 1 / 2 / 2 ;
-    background-image: url(images/Arch-Shape-2.png);
+    background-image: url(images/glamour.png);
     background-size: cover;
 }
 /* Extra child positioned for extension in future*/
@@ -315,7 +315,10 @@ body{
 .extra-space{
     height: 250.3125rem;
 }
-
+.wrapper{
+    width: 100vw;
+    overflow-x: hidden;
+}
 /* ARSHAD'S PORTION */
 .for-bg-black{
     background: #000;
@@ -679,7 +682,7 @@ opacity: 0.7;
     }
     #section-3{
         transform: none;
-        background-image: url(images/Arch-Shape-2.png);
+        background-image: url(images/glamour.png);
         background-size: cover;
     }
     #section-4{

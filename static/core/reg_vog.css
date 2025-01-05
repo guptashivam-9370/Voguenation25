@@ -298,6 +298,10 @@ a {
 	font-family: var(--font4);
 }
 
+.team_name a{
+	color: red;
+}
+
 .form-container {
 	justify-content: flex-start;
 	align-items: center;

@@ -71,7 +71,7 @@
                 <div class="text-container">
                     <div class="comp-title">GLAMOUR NOVA</div>
                     <div class="comp-text">the stage where the most glamorous individuals showcase their skills through elegant photoshoots, set against exotic locations of their choosing.</div>
-                    <div class="comp-rulebook"><a class="comp-rulebook-link" href="https://drive.google.com/file/d/1gPem4G8y2oAUFXmIq9-uqRHPON1fm35D/view?pli=1" target="_blank">RULEBOOK</a></div>
+                    <div class="comp-rulebook"><a class="comp-rulebook-link" href="https://drive.google.com/file/d/1rrSeDGKgE1nV-3kxVNH832ef8NWc2N-o/view?usp=sharing" target="_blank">RULEBOOK</a></div>
                 </div>
             </div>
             <div class="extra-space" id="#home-end"></div>
@@ -205,7 +205,7 @@
                     </div>
                     <div class="fu-profile-id-and-contact" style="display: flex; align-items: center; gap:10px">
                         <img src="{% static 'core/images/circle.svg' %}" alt="circle icon">
-                        <a href="mailto:pd@alcheringa.in" style="color: white; text-decoration: none;">pd@alcheringa.in</a>
+                        <a href="mailto:vogue@alcheringa.in" style="color: white; text-decoration: none;">vogue@alcheringa.in</a>
                         <img src="{% static 'core/images/circle.svg' %}" alt="circle icon">
                         <a href="tel:+917386847545" style="color: white; text-decoration: none;">+91 73868 47545</a>
                         <img src="{% static 'core/images/circle.svg' %}" alt="circle icon">
@@ -227,6 +227,13 @@
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         };
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.overflow = "hidden";
+        });
+
+        window.addEventListener("load", function() {
+            document.body.style.overflow = "auto";
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>

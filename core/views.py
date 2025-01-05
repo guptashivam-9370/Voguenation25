@@ -29,32 +29,6 @@ def register(request,competition_name):
         roles = Role.objects.filter(competitions=competitionss)
         competitions = Competition.objects.all()
         print(names)
-        # role_counts = {}
-        # for i in range(len(names)):
-        #     name = names[i]
-        #     email = emails[i]
-        #     phone_number = phone_numbers[i]
-
-        #     # Validate name
-        #     if not name or not (email) or not phone_number or not team_name or  not phone_number.isdigit():
-        #         messages.error(request, f"Please enter All nessacary details properly")
-
-        #         return render(request, 'core/reg_vog.html', {
-        #         'competition' : competition_name,
-        #         'roles': roles,
-        #         'competitions': competitions,
-        #         })
-        # for role in roles:
-        #     role_counts[role]=0
-        # for i in range(num_participants):
-        #     role_counts[role]+=1
-        # for role, count in role_counts.items():
-        #     if count < role.min_member:
-        #         messages.error(request, f'The role {role} requires at least {role.min_member} participants.')
-        #         return render(request, 'core/reg_vog.html', {
-        #         'roles': roles,
-        #         'competitions': competitions,
-        #         })
         team.save()
         for i in range(num_participants):
             role = get_object_or_404(Role, pk=int(role_ids[i]))
@@ -71,27 +45,26 @@ def register(request,competition_name):
                 is_leader=(i == 0)  # First member is the leader
             )
             memberdetails.save()
-        message = """
-Greetings from Alcheringa 2025!
+        message = f"""
+    Greetings from Alcheringa 2025!
 
-We are delighted to confirm your registration for the Rock-o-phonix ,the Flagship Rock band competition of Alcheringa, IIT Guwahati.
+    We are delighted to confirm your registration for {competition_name}, the flagship competition of Alcheringa, IIT Guwahati.
 
+    Event Details:
+        Event Name: {competition_name}
+        Dates: 30th Jan to 2nd Feb
+        Venue: IIT Guwahati Campus
 
-Event Details:
-    Event Name: Rock-O-Phonix
-    Dates: 30th Jan to 2nd Feb
-    Venue: IIT Guwahati Campus
+    Kindly ensure you arrive on time and adhere to the rules and guidelines of the tournament, which will be shared with you soon. For any queries, please feel free to reach out at [+91 83072 79038/ vogue@alcheringa.in].
 
-Kindly ensure you arrive on time and adhere to the rules and guidelines of the tournament, which will be shared with you soon. For any queries, please feel free to reach out at [+91 83072 79038/ rocko@alcheringa.in].
+    We can't wait to witness your performance and participation at {competition_name}, the flagship competition of Alcheringa 2025!
 
-We can't wait to witness your electrifying performance and musical prowess at Rock-O-Phonix, the flagship rock band competition of Alcheringa 2025!
-
-Best regards,
-Ashish kumar,
-Head, Rock-o-phonix,
-Alcheringa 2025,
-IIT Guwahati.
-"""
+    Best regards,
+    Chitti harsh vardhan,
+    Head, Vogue Nation,
+    Alcheringa 2025,
+    IIT Guwahati.
+    """
         send_mail(
             'Registration Successful',
             message,
