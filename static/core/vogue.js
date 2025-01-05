@@ -194,14 +194,14 @@ window.addEventListener('load', () => {
             }
     
             if (!document.querySelector('.text-container[data-inserted="state-of-dress"]')) {
-                // Create new text-container for "STATE OF DRESS"
+                // Create new text-container for "STATES OF DRESS"
                 const newTextContainer2 = document.createElement('div');
                 newTextContainer2.classList.add('text-container');
-                newTextContainer2.setAttribute('data-inserted', 'state-of-dress'); // Prevent duplicates
+                newTextContainer2.setAttribute('data-inserted', 'states-of-dress'); // Prevent duplicates
     
                 const compTitle2 = document.createElement('div');
                 compTitle2.classList.add('comp-title');
-                compTitle2.innerText = 'STATE OF DRESS';
+                compTitle2.innerText = 'STATES OF DRESS';
     
                 const compText2 = document.createElement('div');
                 compText2.classList.add('comp-text');
