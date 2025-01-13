@@ -78,8 +78,8 @@ body{
     justify-content: space-between;
 }
 .navleft{
-    width: 320px;
-    font-size: 12.28px;
+   
+    font-size: 1.3vw;
 }
 .navright{
     width: 209px;
@@ -311,6 +311,7 @@ body{
     font-family: dongle;
     font-size: 1.5625rem;
 }
+
 /* Load extra space for scroll based animation*/
 .extra-space{
     height: 250.3125rem;
@@ -429,7 +430,7 @@ gap: 1vw;
 margin-right: 4vw;
 }
 
-.logo-img img {
+.logo-img svg {
 height: 5vw;
 width: 4.2vw;
 }
@@ -766,6 +767,7 @@ opacity: 0.7;
     
         .fu-link-and-logo-mobile{
           display: block;
+          width: 100vh;
         }
     
         .fu-link-and-logo-mobile{
@@ -779,7 +781,7 @@ opacity: 0.7;
           margin-right: 4vw;
         }
         
-        .logo-img-m img {
+        .logo-img-m svg {
           height: 15vw;
         }
         
@@ -893,4 +895,10 @@ opacity: 0.7;
     .navmenu{
         scale: 0.7;
     }
+}
+
+ 
+.comp-rulebook a{
+   color: #000;
+   
 }

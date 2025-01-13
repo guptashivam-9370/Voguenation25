@@ -66,9 +66,7 @@
 				{% csrf_token %}
 				<div style="width: 100%; display: flex; padding-top: 20px">
 					<div class="sign"></div>
-					<div class="sign">
-						all fields marked with <span style="color: red">*</span> are mandatory
-					</div>
+					
 				</div>
 				<div class="team_container">
 					<div class="team_name">
@@ -77,7 +75,13 @@
 					</div>
 					<div class="buffer"></div>
 					<div class="team_name">
-						<div class="txt-1">SUBMIT YOUR PERFORMANCE(s)&nbsp;<a>*</a></div>
+						<div class="txt-1">SUBMIT YOUR PERFORMANCE(s)&nbsp;<a>*</a>
+						
+							<div class="sign">
+								all fields marked with <span style="color: red">*</span> are mandatory
+							</div>
+
+						</div>
 						<input type="text" class="input-box" name="performance" />
 					</div>
 				</div>
