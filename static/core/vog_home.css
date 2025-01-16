@@ -28,6 +28,11 @@
     src: url(fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
 }
 
+.bg-black{
+    background: #000;
+    width: 100%;
+}
+
 /* Load custom classes */
 .invisible{
     visibility: hidden;
@@ -54,7 +59,7 @@ body{
 .navbar{
     position: fixed;
     height: 125px;
-    width: 100vw;
+    width: 90vw;
     z-index: 1000;
     background-color: black;
     display: flex;
@@ -63,6 +68,7 @@ body{
     font-family: lemonmilk;
     color: white;
     opacity: 0;
+    overflow-x: hidden;
 }
 .navcontent{
     width: 89.2%;
@@ -195,7 +201,8 @@ body{
     top: 0px;
     left: 0px;
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,6 +220,7 @@ body{
     left: -10px;
     height: 152%;
     width: 100vw;
+    width: 100%;
     background: #040402 url("images/hero-background.png") no-repeat;
     background-size: cover;
     filter: blur(3px);
@@ -248,20 +256,20 @@ body{
 /* Load Mains-Competitions */
 .competitions{
     height: 64rem;
-    width: 102%;
+    width: 100%;
     background-color: #ECF0FF;
     overflow: hidden;
 }
 .shape-container{
     height: 128rem;
-    width: 128rem;
+    width: 100%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 }
 .shape{
-    height: 64rem;
-    width: 64rem;
+    height: 50%;
+    width: 50rem;
 }
 .shape:nth-child(1){
     grid-area: 1 / 1 / 2 / 2 ;
@@ -318,6 +326,7 @@ body{
 }
 .wrapper{
     width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 }
 /* ARSHAD'S PORTION */
@@ -609,6 +618,7 @@ opacity: 0.7;
     .hero-wrapper{
         height: 120vh;
         width: 100vw;
+        width: 100%;
         overflow: hidden;
     }
     .hero-background{
@@ -620,6 +630,7 @@ opacity: 0.7;
     }
     .hero{
         width: 100vw;
+        width: 100%;
     }
     .navbar{
         /* width: 102vw; */
@@ -669,6 +680,7 @@ opacity: 0.7;
     .shape-container{
         height: fit-content;
         width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 0em;
@@ -777,6 +789,7 @@ opacity: 0.7;
           display: flex;
           gap: 1vw;
           width: 100vw;
+          width: 100%;
           justify-content: center;
           margin-right: 4vw;
         }
@@ -803,6 +816,7 @@ opacity: 0.7;
         .fu-link {
           margin-left: 0vw;
           width: 100vw;
+          width: 100%;
           margin-top: 1vw;
           display: flex;
           flex-direction: column;
